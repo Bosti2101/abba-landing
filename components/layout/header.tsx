@@ -156,7 +156,7 @@ export function Header() {
             <div className='flex lg:hidden items-center gap-4'>
               <LanguageSwitcher inverted={!scrolled} />
               <button
-                onClick={() => setMenuOpen((v) => !v)}
+                onClick={() => setMenuOpen((open) => !open)}
                 aria-label={menuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={menuOpen}
                 className={cn(

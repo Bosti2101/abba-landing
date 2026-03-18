@@ -10,12 +10,7 @@ import { staggerContainer, scaleIn } from "@/lib/motion/variants";
 import { motion } from "framer-motion";
 import { serviceItems } from "@/content/site-data";
 import { cn } from "@/lib/utils/cn";
-
-const ArrowIcon = () => (
-  <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-    <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+import { ArrowIcon } from "./arrow-icon";
 
 export function ServicesSection() {
   const t = useTranslations("services");

@@ -7,12 +7,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
 import { fadeInLeft, fadeInRight, staggerContainer, fadeInUp } from "@/lib/motion/variants";
 import { motion } from "framer-motion";
-
-const CheckIcon = () => (
-  <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" className="shrink-0">
-    <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
+import { CheckIcon } from "./check-icon";
 
 export function EngineeringSection() {
   const t = useTranslations("engineering");

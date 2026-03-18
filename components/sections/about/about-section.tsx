@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useInView } from "framer-motion";
@@ -8,36 +8,7 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
 import { fadeInLeft, fadeInRight } from "@/lib/motion/variants";
-
-interface StatCounterProps {
-  target: number;
-  suffix?: string;
-  duration?: number;
-  active: boolean;
-}
-
-function StatCounter({ target, suffix = "", duration = 1600, active }: StatCounterProps) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!active) return;
-    let start = 0;
-    const step = target / (duration / 16);
-    const timer = setInterval(() => {
-      start = Math.min(start + step, target);
-      setCount(Math.floor(start));
-      if (start >= target) clearInterval(timer);
-    }, 16);
-    return () => clearInterval(timer);
-  }, [active, target, duration]);
-
-  return (
-    <span>
-      ~{count}
-      {suffix}
-    </span>
-  );
-}
+import { StatCounter } from "@/components/sections/about/stat-counter";
 
 export function AboutSection() {
   const t = useTranslations("about");

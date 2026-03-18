@@ -190,7 +190,7 @@ export function ContactForm() {
                 className='absolute opacity-0 pointer-events-none h-0 w-0 overflow-hidden'
                 value={form.website || ''}
                 onChange={(e) =>
-                  setForm((f) => ({ ...f, website: e.target.value }))
+                  setForm((prev) => ({ ...prev, website: e.target.value }))
                 }
               />
               <div className='grid grid-cols-1 sm:grid-cols-2 gap-5'>
@@ -201,9 +201,9 @@ export function ContactForm() {
                   required
                   value={form.name}
                   error={fieldErrors.name}
-                  onChange={(v) => {
-                    setForm((f) => ({ ...f, name: v }));
-                    setFieldErrors((e) => ({ ...e, name: '' }));
+                  onChange={(value) => {
+                    setForm((prev) => ({ ...prev, name: value }));
+                    setFieldErrors((prev) => ({ ...prev, name: '' }));
                   }}
                 />
                 <FormField
@@ -213,9 +213,9 @@ export function ContactForm() {
                   required
                   value={form.email}
                   error={fieldErrors.email}
-                  onChange={(v) => {
-                    setForm((f) => ({ ...f, email: v }));
-                    setFieldErrors((e) => ({ ...e, email: '' }));
+                  onChange={(value) => {
+                    setForm((prev) => ({ ...prev, email: value }));
+                    setFieldErrors((prev) => ({ ...prev, email: '' }));
                   }}
                 />
               </div>
@@ -226,16 +226,16 @@ export function ContactForm() {
                   type='tel'
                   value={form.phone}
                   error={fieldErrors.phone}
-                  onChange={(v) => {
-                    setForm((f) => ({ ...f, phone: v }));
-                    setFieldErrors((e) => ({ ...e, phone: '' }));
+                  onChange={(value) => {
+                    setForm((prev) => ({ ...prev, phone: value }));
+                    setFieldErrors((prev) => ({ ...prev, phone: '' }));
                   }}
                 />
                 <CustomSelect
                   label={t('formCountry')}
                   placeholder={t('countryPlaceholder')}
                   value={form.country}
-                  onChange={(v) => setForm((f) => ({ ...f, country: v }))}
+                  onChange={(value) => setForm((prev) => ({ ...prev, country: value }))}
                   options={[
                     { value: 'romania', label: t('countryRomania') },
                     { value: 'bulgaria', label: t('countryBulgaria') },
@@ -259,8 +259,8 @@ export function ContactForm() {
                   aria-describedby={fieldErrors.message ? 'message-error' : undefined}
                   aria-invalid={!!fieldErrors.message}
                   onChange={(e) => {
-                    setForm((f) => ({ ...f, message: e.target.value }));
-                    setFieldErrors((err) => ({ ...err, message: '' }));
+                    setForm((prev) => ({ ...prev, message: e.target.value }));
+                    setFieldErrors((prev) => ({ ...prev, message: '' }));
                   }}
                   className='bg-white/10 rounded-sm px-4 py-3 text-sm text-white placeholder:text-white/30 focus:outline-none resize-none'
                   style={{

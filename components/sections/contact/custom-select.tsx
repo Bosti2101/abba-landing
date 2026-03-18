@@ -29,7 +29,7 @@ export function CustomSelect({
   const ref = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
 
-  const selected = options.find((o) => o.value === value);
+  const selected = options.find((option) => option.value === value);
 
   // Close on outside click
   useEffect(() => {
@@ -45,7 +45,7 @@ export function CustomSelect({
   // Reset active index when opening
   useEffect(() => {
     if (open) {
-      const currentIdx = options.findIndex((o) => o.value === value);
+      const currentIdx = options.findIndex((option) => option.value === value);
       setActiveIndex(currentIdx >= 0 ? currentIdx : 0);
     }
   }, [open, options, value]);
@@ -129,7 +129,7 @@ export function CustomSelect({
           aria-haspopup='listbox'
           aria-controls={listboxId}
           aria-labelledby='country-label'
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => setOpen((open) => !open)}
           onKeyDown={handleKeyDown}
           className='w-full bg-white/10 rounded-sm px-4 py-3 text-sm text-left flex items-center justify-between'
           style={{
