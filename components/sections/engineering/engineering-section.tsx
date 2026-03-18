@@ -20,7 +20,7 @@ export function EngineeringSection() {
   const points = [t("point1"), t("point2"), t("point3"), t("point4")];
 
   return (
-    <section className="section-y-sm bg-[#faf9f7]" aria-label="Engineering and design">
+    <section className="section-y-sm bg-surface-warm" aria-label="Engineering and design">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text side */}
@@ -44,12 +44,12 @@ export function EngineeringSection() {
                 <motion.li
                   key={point}
                   variants={fadeInUp}
-                  className="flex items-start gap-3 p-4 bg-white rounded-md border border-[#e8e4df] shadow-sm"
+                  className="flex items-start gap-3 p-4 bg-white rounded-md border border-border shadow-sm"
                 >
-                  <span className="mt-0.5 text-[#c0392b]">
+                  <span className="mt-0.5 text-brand">
                     <CheckIcon />
                   </span>
-                  <span className="text-sm text-[#4a4a4a] font-medium leading-snug">
+                  <span className="text-sm text-ink-secondary font-medium leading-snug">
                     {point}
                   </span>
                 </motion.li>
@@ -62,7 +62,7 @@ export function EngineeringSection() {
             <div className="flex flex-col gap-5">
               <div className="relative aspect-video rounded-lg overflow-hidden">
                 <Image
-                  src="/images/pic7.jpeg"
+                  src="/images/pic7.webp"
                   alt="Modern pergola over outdoor pool with elegant dark structure"
                   fill
                   className="object-cover"
@@ -71,7 +71,7 @@ export function EngineeringSection() {
               </div>
               <div className="relative aspect-video rounded-lg overflow-hidden">
                 <Image
-                  src="/images/pic8.jpeg"
+                  src="/images/pic8.webp"
                   alt="White pergola attached to building with staircase"
                   fill
                   className="object-cover"

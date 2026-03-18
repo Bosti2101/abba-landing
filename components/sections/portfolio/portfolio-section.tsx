@@ -4,6 +4,7 @@ import { useCallback } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
@@ -11,11 +12,14 @@ import { portfolioCategories } from "@/content/site-data";
 
 export function PortfolioSection() {
   const t = useTranslations("portfolio");
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: "start",
-    slidesToScroll: 1,
-  });
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      slidesToScroll: 1,
+    },
+    [Autoplay({ delay: 4000, stopOnInteraction: true })],
+  );
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
@@ -68,7 +72,7 @@ export function PortfolioSection() {
             <button
               onClick={scrollPrev}
               aria-label="Previous"
-              className="w-11 h-11 rounded-sm border border-[#e8e4df] flex items-center justify-center text-[#4a4a4a] hover:border-[#c0392b] hover:text-[#c0392b] cursor-pointer"
+              className="w-11 h-11 rounded-sm border border-border flex items-center justify-center text-ink-secondary hover:border-brand hover:text-brand cursor-pointer"
               style={{ transition: "all 0.2s ease" }}
             >
               <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
@@ -78,7 +82,7 @@ export function PortfolioSection() {
             <button
               onClick={scrollNext}
               aria-label="Next"
-              className="w-11 h-11 rounded-sm border border-[#e8e4df] flex items-center justify-center text-[#4a4a4a] hover:border-[#c0392b] hover:text-[#c0392b] cursor-pointer"
+              className="w-11 h-11 rounded-sm border border-border flex items-center justify-center text-ink-secondary hover:border-brand hover:text-brand cursor-pointer"
               style={{ transition: "all 0.2s ease" }}
             >
               <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">

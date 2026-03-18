@@ -9,8 +9,8 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils/cn";
 
 const heroSlides = [
-  { src: "/images/hero.jpg", alt: "Premium pergola over outdoor pool at dusk", origin: "center center" },
-  { src: "/images/hero2.png", alt: "Modern pergola system with elegant design", origin: "left center" },
+  { src: "/images/hero.webp", alt: "Premium pergola over outdoor pool at dusk", origin: "center center" },
+  { src: "/images/hero2.webp", alt: "Modern pergola system with elegant design", origin: "left center" },
   { src: "/images/hero4.webp", alt: "Bioclimatic pergola with glass walls", origin: "right center" },
 ];
 
@@ -110,7 +110,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <span className="inline-flex items-center gap-2 mb-6">
-              <span className="block w-8 h-px bg-[#c0392b]" />
+              <span className="block w-8 h-px bg-brand" />
               <span className="text-xs font-semibold tracking-widest uppercase text-white/60">
                 ABA Pergola Systems
               </span>
@@ -160,7 +160,7 @@ export function HeroSection() {
                 variant="outline"
                 className="border-white/40 text-white hover:bg-white/10 hover:border-white/60"
               >
-                View Projects
+                {t("ctaProjects")}
               </Button>
             </Link>
           </motion.div>
@@ -171,6 +171,7 @@ export function HeroSection() {
       <div
         className="absolute bottom-44 md:bottom-24 left-1/2 -translate-x-1/2"
         style={{ zIndex: 3 }}
+        aria-hidden="true"
       >
         <motion.div
           className="flex flex-col items-center gap-2 text-white/40"
@@ -229,6 +230,7 @@ function HeroSlide({ index, slide, isCurrent, isPrevious }: HeroSlideProps) {
   const isFirstMount = useRef(true);
 
   // Start wipe + Ken Burns animation whenever this slide becomes current
+  // Reset clip-path when slide is no longer visible to prevent flash on re-entry
   useEffect(() => {
     if (isCurrent) {
       const kb = kenBurnsVariant;
@@ -261,10 +263,15 @@ function HeroSlide({ index, slide, isCurrent, isPrevious }: HeroSlideProps) {
           ease: "linear",
         },
       });
+    } else if (!isPrevious) {
+      // Slide is neither current nor previous — reset clip-path to hidden
+      // so it doesn't flash the old zoomed-in frame when it becomes current again
+      wipeControls.set({ clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" });
+      kbControls.set({ scale: 1, x: 0, y: 0 });
     }
     prevIsCurrent.current = isCurrent;
     isFirstMount.current = false;
-  }, [isCurrent, kbControls, wipeControls, index]);
+  }, [isCurrent, isPrevious, kbControls, wipeControls, index]);
 
   // Determine visibility and z-index
   // Current slide wipes in on top (z:1), previous stays visible underneath (z:0), others hidden

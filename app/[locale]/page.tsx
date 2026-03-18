@@ -31,6 +31,13 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
       description: t("homeDesc"),
       type: "website",
       locale,
+      images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("homeTitle"),
+      description: t("homeDesc"),
+      images: ["/images/og-image.webp"],
     },
     alternates: {
       canonical: `/${locale}`,

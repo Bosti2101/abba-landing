@@ -18,6 +18,17 @@ export async function generateMetadata({ params }: FaqPageProps): Promise<Metada
   return {
     title: `${t("title")} — ABA Pergola Systems`,
     description: t("q1"),
+    openGraph: {
+      title: `${t("title")} — ABA Pergola Systems`,
+      description: t("q1"),
+      images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${t("title")} — ABA Pergola Systems`,
+      description: t("q1"),
+      images: ["/images/og-image.webp"],
+    },
   };
 }
 

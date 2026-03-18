@@ -31,7 +31,7 @@ export function SectionHeading({
         <span
           className={cn(
             "text-xs font-semibold tracking-widest uppercase mb-4",
-            inverted ? "text-[#c0392b]" : "text-[#c0392b]"
+            inverted ? "text-brand" : "text-brand"
           )}
         >
           {label}
@@ -41,7 +41,7 @@ export function SectionHeading({
         className={cn(
           "font-semibold leading-tight tracking-tight",
           "text-3xl sm:text-4xl lg:text-5xl",
-          inverted ? "text-white" : "text-[#1a1a1a]"
+          inverted ? "text-white" : "text-ink"
         )}
       >
         {title}
@@ -51,7 +51,7 @@ export function SectionHeading({
           className={cn(
             "mt-5 leading-relaxed max-w-2xl",
             "text-base sm:text-lg",
-            inverted ? "text-white/70" : "text-[#4a4a4a]"
+            inverted ? "text-white/70" : "text-ink-secondary"
           )}
         >
           {description}

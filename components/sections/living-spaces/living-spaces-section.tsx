@@ -20,7 +20,7 @@ export function LivingSpacesSection() {
           <Reveal variants={fadeInLeft}>
             <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[560px] rounded-lg overflow-hidden">
               <Image
-                src="/images/pic1.jpeg"
+                src="/images/pic1.webp"
                 alt="Spacious enclosed terrace with glass walls and pergola roof"
                 fill
                 className="object-cover"
@@ -29,14 +29,14 @@ export function LivingSpacesSection() {
               {/* Accent card */}
               <div className="absolute bottom-6 left-6 right-6 sm:right-auto sm:max-w-xs bg-white/95 backdrop-blur-sm rounded-md p-4 shadow-lg">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#fdf2f0] rounded-md flex items-center justify-center shrink-0">
-                    <div className="w-4 h-4 rounded-sm bg-[#c0392b]" />
+                  <div className="w-10 h-10 bg-brand-light rounded-md flex items-center justify-center shrink-0">
+                    <div className="w-4 h-4 rounded-sm bg-brand" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-[#1a1a1a] leading-tight">
+                    <p className="text-xs font-semibold text-ink leading-tight">
                       All-Season Comfort
                     </p>
-                    <p className="text-xs text-[#7a7a7a] mt-0.5">
+                    <p className="text-xs text-ink-muted mt-0.5">
                       365 days of outdoor living
                     </p>
                   </div>
@@ -58,8 +58,8 @@ export function LivingSpacesSection() {
               <ul className="flex flex-col gap-4">
                 {features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#c0392b] shrink-0" />
-                    <span className="text-sm text-[#4a4a4a] font-medium">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand shrink-0" />
+                    <span className="text-sm text-ink-secondary font-medium">
                       {feature}
                     </span>
                   </li>

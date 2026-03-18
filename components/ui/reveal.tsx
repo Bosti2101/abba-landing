@@ -18,7 +18,7 @@ export function Reveal({
   variants = fadeInUp,
   className,
   delay = 0,
-  once = false,
+  once = true,
 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once, margin: "-80px 0px" });

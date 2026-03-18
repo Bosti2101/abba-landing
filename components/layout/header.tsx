@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Link, usePathname } from '@/lib/i18n/navigation';
 import { LanguageSwitcher } from './language-switcher';
 import { Button } from '@/components/ui/button';
@@ -23,6 +24,22 @@ export function Header() {
     setMenuOpen(false);
   }, [pathname]);
 
+  // Lock body scroll and set inert on main content when mobile menu is open
+  useEffect(() => {
+    const main = document.getElementById('main-content');
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+      main?.setAttribute('inert', '');
+    } else {
+      document.body.style.overflow = '';
+      main?.removeAttribute('inert');
+    }
+    return () => {
+      document.body.style.overflow = '';
+      main?.removeAttribute('inert');
+    };
+  }, [menuOpen]);
+
   const navItems = [
     { href: '/', label: t('home') },
     { href: '/services', label: t('services') },
@@ -39,7 +56,7 @@ export function Header() {
         {/* Background layer — fades in/out smoothly */}
         <div
           className={cn(
-            'absolute inset-0 bg-white border-b border-[#e8e4df] shadow-sm',
+            'absolute inset-0 bg-white border-b border-border shadow-sm',
             'transition-opacity duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]',
             scrolled ? 'opacity-100' : 'opacity-0',
           )}
@@ -53,9 +70,12 @@ export function Header() {
               className='block'
               aria-label='ABA Pergola Systems'
             >
-              <img
+              <Image
                 src='/logo.png'
                 alt='ABA Pergola Systems'
+                width={120}
+                height={40}
+                priority
                 className={cn(
                   'h-10 md:h-12 w-auto transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]',
                   scrolled ? '' : 'brightness-0 invert',
@@ -89,12 +109,12 @@ export function Header() {
                     'transition-colors duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]',
                     isActive(href)
                       ? scrolled
-                        ? 'text-[#c0392b]'
+                        ? 'text-brand'
                         : 'text-white'
                       : scrolled
-                        ? 'text-[#4a4a4a] hover:text-[#c0392b]'
+                        ? 'text-ink-secondary hover:text-brand'
                         : 'text-white/80 hover:text-white',
-                    'after:absolute after:bottom-0 after:left-0 after:h-px after:bg-[#c0392b]',
+                    'after:absolute after:bottom-0 after:left-0 after:h-px after:bg-brand',
                     'after:transition-all after:duration-200',
                     isActive(href)
                       ? 'after:w-full'
@@ -124,7 +144,7 @@ export function Header() {
                   variant={scrolled ? 'primary' : 'outline'}
                   className={cn(
                     !scrolled &&
-                      'border-white text-white [&:hover]:bg-white [&:hover]:text-[#1a1a1a]',
+                      'border-white text-white [&:hover]:bg-white [&:hover]:text-ink',
                   )}
                 >
                   {t('cta')}
@@ -141,7 +161,7 @@ export function Header() {
                 aria-expanded={menuOpen}
                 className={cn(
                   'p-2 -mr-1 rounded-sm transition-colors duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]',
-                  scrolled ? 'text-[#1a1a1a]' : 'text-white',
+                  scrolled ? 'text-ink' : 'text-white',
                 )}
               >
                 <span className='sr-only'>{menuOpen ? 'Close' : 'Menu'}</span>
@@ -194,11 +214,11 @@ export function Header() {
             menuOpen ? 'translate-x-0' : 'translate-x-full',
           )}
         >
-          <div className='flex items-center justify-between px-6 h-16 border-b border-[#e8e4df]'>
-            <span className='font-bold text-[#1a1a1a]'>Menu</span>
+          <div className='flex items-center justify-between px-6 h-16 border-b border-border'>
+            <span className='font-bold text-ink'>Menu</span>
             <button
               onClick={() => setMenuOpen(false)}
-              className='p-2 -mr-2 text-[#4a4a4a]'
+              className='p-2 -mr-2 text-ink-secondary'
               aria-label='Close menu'
             >
               <svg width='18' height='18' viewBox='0 0 18 18' fill='none'>
@@ -233,10 +253,10 @@ export function Header() {
                     : undefined
                 }
                 className={cn(
-                  'py-3 text-base font-medium border-b border-[#f2f0ed] transition-colors duration-200',
+                  'py-3 text-base font-medium border-b border-surface-mid transition-colors duration-200',
                   isActive(href)
-                    ? 'text-[#c0392b]'
-                    : 'text-[#1a1a1a] hover:text-[#c0392b]',
+                    ? 'text-brand'
+                    : 'text-ink hover:text-brand',
                 )}
               >
                 {label}

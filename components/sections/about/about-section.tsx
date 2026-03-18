@@ -54,7 +54,7 @@ export function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="section-y bg-[#faf9f7]"
+      className="section-y bg-surface-warm"
       aria-label="About section"
     >
       <Container>
@@ -73,9 +73,9 @@ export function AboutSection() {
                 {stats.map(({ labelKey, target, suffix }) => (
                   <div
                     key={labelKey}
-                    className="flex flex-col gap-1 p-5 bg-white rounded-lg border border-[#e8e4df] shadow-sm"
+                    className="flex flex-col gap-1 p-5 bg-white rounded-lg border border-border shadow-sm"
                   >
-                    <span className="text-3xl font-bold text-[#c0392b] tracking-tight">
+                    <span className="text-3xl font-bold text-brand tracking-tight">
                       <StatCounter
                         target={target}
                         suffix={suffix}
@@ -83,7 +83,7 @@ export function AboutSection() {
                       />
                       {target >= 200 && "+"}
                     </span>
-                    <span className="text-sm text-[#7a7a7a] font-medium">
+                    <span className="text-sm text-ink-muted font-medium">
                       {labelKey}
                     </span>
                   </div>
@@ -96,14 +96,14 @@ export function AboutSection() {
           <Reveal variants={fadeInRight}>
             <div className="relative aspect-[3/4] lg:aspect-auto lg:h-[580px] rounded-lg overflow-hidden">
               <Image
-                src="/images/pic3.jpeg"
+                src="/images/pic3.webp"
                 alt="Enclosed terrace with glass walls and bioclimatic louvered roof"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               {/* Decorative accent */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#c0392b] rounded-lg -z-10" />
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand rounded-lg -z-10" />
             </div>
           </Reveal>
         </div>

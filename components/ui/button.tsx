@@ -9,16 +9,15 @@ type ButtonSize = "sm" | "md" | "lg";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   size?: ButtonSize;
-  asChild?: boolean;
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-[#c0392b] text-white hover:bg-[#a93226] active:bg-[#922b21] shadow-sm",
+    "bg-brand text-white hover:bg-brand-hover active:bg-[#922b21] shadow-sm",
   outline:
-    "border border-[#c0392b] text-[#c0392b] hover:bg-[#c0392b] hover:text-white",
-  ghost: "text-[#c0392b] hover:bg-[#fdf2f0]",
-  dark: "bg-[#1a1a1a] text-white hover:bg-[#2d2d2d] active:bg-[#3d3d3d]",
+    "border border-brand text-brand hover:bg-brand hover:text-white",
+  ghost: "text-brand hover:bg-brand-light",
+  dark: "bg-ink text-white hover:bg-[#2d2d2d] active:bg-[#3d3d3d]",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -35,7 +34,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           "inline-flex items-center justify-center font-medium tracking-wide",
           "rounded-sm",
-          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#c0392b] focus-visible:outline-offset-2",
+          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand focus-visible:outline-offset-2",
           "disabled:opacity-50 disabled:cursor-not-allowed",
           "cursor-pointer select-none",
           variantStyles[variant],

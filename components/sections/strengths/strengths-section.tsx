@@ -41,9 +41,9 @@ export function StrengthsSection() {
   ];
 
   const images = [
-    { src: "/images/pic4.jpeg", alt: "Pergola installed over stone terrace" },
-    { src: "/images/pic5.jpeg", alt: "Close-up of retractable louvered roof detail" },
-    { src: "/images/pic6.jpeg", alt: "Technical aluminum profile engineering render" },
+    { src: "/images/pic4.webp", alt: "Pergola installed over stone terrace" },
+    { src: "/images/pic5.webp", alt: "Close-up of retractable louvered roof detail" },
+    { src: "/images/pic6.webp", alt: "Technical aluminum profile engineering render" },
   ];
 
   return (
@@ -71,7 +71,7 @@ export function StrengthsSection() {
                   sizes="(max-width: 640px) 50vw, 25vw"
                 />
               </div>
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-[#f2f0ed]">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-surface-mid">
                 <Image
                   src={images[2].src}
                   alt={images[2].alt}
@@ -106,14 +106,14 @@ export function StrengthsSection() {
                   variants={fadeInUp}
                   className="flex gap-5"
                 >
-                  <div className="shrink-0 w-10 h-10 bg-[#fdf2f0] rounded-md flex items-center justify-center text-[#c0392b] mt-0.5">
+                  <div className="shrink-0 w-10 h-10 bg-brand-light rounded-md flex items-center justify-center text-brand mt-0.5">
                     {icons[i]}
                   </div>
                   <div>
-                    <p className="font-semibold text-[#1a1a1a] text-sm mb-1.5">
+                    <p className="font-semibold text-ink text-sm mb-1.5">
                       {title}
                     </p>
-                    <p className="text-[#4a4a4a] text-sm leading-relaxed">{desc}</p>
+                    <p className="text-ink-secondary text-sm leading-relaxed">{desc}</p>
                   </div>
                 </motion.li>
               ))}

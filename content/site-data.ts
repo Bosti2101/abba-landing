@@ -18,12 +18,12 @@ export const portfolioCategories: PortfolioCategory[] = [
     label: "category1",
     images: [
       {
-        src: "/images/pic1.jpeg",
+        src: "/images/pic1.webp",
         alt: "Retractable roof pergola over residential terrace",
         category: "retractable-roof",
       },
       {
-        src: "/images/pic2.jpeg",
+        src: "/images/pic2.webp",
         alt: "Modern retractable pergola system",
         category: "retractable-roof",
       },
@@ -34,12 +34,12 @@ export const portfolioCategories: PortfolioCategory[] = [
     label: "category2",
     images: [
       {
-        src: "/images/pic3.jpeg",
+        src: "/images/pic3.webp",
         alt: "Elegant winter garden extension",
         category: "winter-garden",
       },
       {
-        src: "/images/pic4.jpeg",
+        src: "/images/pic4.webp",
         alt: "Modern winter garden with glass walls",
         category: "winter-garden",
       },
@@ -50,12 +50,12 @@ export const portfolioCategories: PortfolioCategory[] = [
     label: "category3",
     images: [
       {
-        src: "/images/pic5.jpeg",
+        src: "/images/pic5.webp",
         alt: "Bioclimatic rolling roof system",
         category: "bioclimatic-roof",
       },
       {
-        src: "/images/pic6.jpeg",
+        src: "/images/pic6.webp",
         alt: "Louvered bioclimatic pergola",
         category: "bioclimatic-roof",
       },
@@ -66,12 +66,12 @@ export const portfolioCategories: PortfolioCategory[] = [
     label: "category4",
     images: [
       {
-        src: "/images/pic7.jpeg",
+        src: "/images/pic7.webp",
         alt: "Automatic guillotine window system",
         category: "guillotine-window",
       },
       {
-        src: "/images/pic8.jpeg",
+        src: "/images/pic8.webp",
         alt: "Glass guillotine enclosure",
         category: "guillotine-window",
       },
@@ -103,28 +103,28 @@ export const serviceItems: ServiceItem[] = [
     id: "retractable-roof",
     title: "item1Title",
     description: "item1Desc",
-    image: "/images/pic1.jpeg",
+    image: "/images/pic1.webp",
     href: "/projects/retractable-roof",
   },
   {
     id: "winter-garden",
     title: "item2Title",
     description: "item2Desc",
-    image: "/images/pic3.jpeg",
+    image: "/images/pic3.webp",
     href: "/projects/winter-garden",
   },
   {
     id: "bioclimatic-roof",
     title: "item3Title",
     description: "item3Desc",
-    image: "/images/pic5.jpeg",
+    image: "/images/pic5.webp",
     href: "/projects/bioclimatic-roof",
   },
   {
     id: "guillotine-window",
     title: "item4Title",
     description: "item4Desc",
-    image: "/images/pic9.jpeg",
+    image: "/images/pic9.webp",
     href: "/projects/guillotine-window",
   },
 ];

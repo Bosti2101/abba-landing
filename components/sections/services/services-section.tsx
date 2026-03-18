@@ -21,7 +21,7 @@ export function ServicesSection() {
   const t = useTranslations("services");
 
   return (
-    <section className="section-y-sm bg-[#faf9f7]" aria-label="Services">
+    <section className="section-y-sm bg-surface-warm" aria-label="Services">
       <Container>
         <Reveal>
           <SectionHeading
@@ -44,7 +44,7 @@ export function ServicesSection() {
             <motion.div key={item.id} variants={scaleIn}>
               <Link
                 href={item.href}
-                className="group flex flex-col h-full bg-white rounded-xl border border-[#e8e4df] overflow-hidden shadow-sm hover:shadow-md"
+                className="group flex flex-col h-full bg-white rounded-xl border border-border overflow-hidden shadow-sm hover:shadow-md"
                 style={{ transition: "box-shadow 0.3s ease" }}
                 aria-label={t(item.title as "item1Title" | "item2Title" | "item3Title" | "item4Title")}
               >
@@ -61,13 +61,13 @@ export function ServicesSection() {
 
                 {/* Content */}
                 <div className="flex flex-col flex-1 p-6 gap-3">
-                  <h3 className="font-semibold text-[#1a1a1a] text-sm leading-snug">
+                  <h3 className="font-semibold text-ink text-sm leading-snug">
                     {t(item.title as "item1Title" | "item2Title" | "item3Title" | "item4Title")}
                   </h3>
-                  <p className="text-xs text-[#7a7a7a] leading-relaxed flex-1">
+                  <p className="text-xs text-ink-muted leading-relaxed flex-1">
                     {t(item.description as "item1Desc" | "item2Desc" | "item3Desc" | "item4Desc")}
                   </p>
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#c0392b] mt-2 group-hover:gap-3"
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand mt-2 group-hover:gap-3"
                     style={{ transition: "gap 0.2s ease" }}>
                     {t("learnMore")} <ArrowIcon />
                   </span>

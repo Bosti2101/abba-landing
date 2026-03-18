@@ -45,6 +45,29 @@
   --color-background: var(--color-surface);
   --color-foreground: var(--color-ink);
   --font-sans: var(--font-sans);
+
+  /* Brand */
+  --color-brand: var(--brand-primary);
+  --color-brand-hover: var(--brand-primary-hover);
+  --color-brand-light: var(--brand-primary-light);
+
+  /* Ink */
+  --color-ink: var(--color-ink);
+  --color-ink-secondary: var(--color-ink-secondary);
+  --color-ink-muted: var(--color-ink-muted);
+
+  /* Surface */
+  --color-surface: var(--color-surface);
+  --color-surface-warm: var(--color-surface-warm);
+  --color-surface-mid: var(--color-surface-mid);
+  --color-surface-dark: var(--color-surface-dark);
+
+  /* Border */
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+
+  /* Error */
+  --color-error: #e74c3c;
 }
 
 /* ─── Base Reset ─────────────────────────────────────── */

@@ -9,6 +9,7 @@ interface ContactBody {
   phone?: string;
   country?: string;
   message: string;
+  website?: string;
 }
 
 // Basic in-memory rate limiting: max 3 submissions per minute per IP
@@ -37,6 +38,11 @@ export async function POST(req: NextRequest) {
       { error: 'Invalid request body.' },
       { status: 400 },
     );
+  }
+
+  // Honeypot check — reject if bot filled the hidden field
+  if (body.website) {
+    return NextResponse.json({ success: true });
   }
 
   if (!body.name?.trim() || !body.email?.trim() || !body.message?.trim()) {

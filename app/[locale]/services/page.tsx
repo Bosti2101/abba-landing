@@ -18,7 +18,17 @@ export async function generateMetadata({ params }: ServicesPageProps): Promise<M
   return {
     title: t("servicesTitle"),
     description: t("servicesDesc"),
-    openGraph: { title: t("servicesTitle"), description: t("servicesDesc") },
+    openGraph: {
+      title: t("servicesTitle"),
+      description: t("servicesDesc"),
+      images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("servicesTitle"),
+      description: t("servicesDesc"),
+      images: ["/images/og-image.webp"],
+    },
   };
 }
 

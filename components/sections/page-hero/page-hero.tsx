@@ -12,12 +12,12 @@ interface PageHeroProps {
 
 export function PageHero({ label, title, description }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[#111111]">
+    <section className="relative overflow-hidden bg-surface-dark">
       {/* Background pattern / texture */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Gradient mesh */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#c0392b]/[0.07] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#c0392b]/[0.04] rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand/[0.07] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand/[0.04] rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4" />
 
         {/* Grid lines */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
@@ -39,8 +39,8 @@ export function PageHero({ label, title, description }: PageHeroProps) {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="flex items-center gap-3 mb-8"
           >
-            <span className="block w-10 h-px bg-[#c0392b]" />
-            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#c0392b]">
+            <span className="block w-10 h-px bg-brand" />
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-brand">
               {label}
             </span>
           </motion.div>

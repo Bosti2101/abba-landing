@@ -19,7 +19,7 @@ function FaqItem({ question, answer, isOpen, onToggle, index }: FaqItemProps) {
   return (
     <div
       className={cn(
-        "border-b border-[#e8e4df] last:border-b-0",
+        "border-b border-border last:border-b-0",
         "transition-colors duration-150"
       )}
     >
@@ -28,17 +28,17 @@ function FaqItem({ question, answer, isOpen, onToggle, index }: FaqItemProps) {
         aria-expanded={isOpen}
         className={cn(
           "w-full flex items-start justify-between gap-4 py-6 text-left",
-          "cursor-pointer focus-visible:outline-none focus-visible:text-[#c0392b]"
+          "cursor-pointer focus-visible:outline-none focus-visible:text-brand"
         )}
       >
         <div className="flex items-start gap-4">
-          <span className="text-xs font-bold text-[#c0392b] mt-0.5 tabular-nums">
+          <span className="text-xs font-bold text-brand mt-0.5 tabular-nums">
             {String(index + 1).padStart(2, "0")}
           </span>
           <span
             className={cn(
               "text-base font-semibold",
-              isOpen ? "text-[#c0392b]" : "text-[#1a1a1a]"
+              isOpen ? "text-brand" : "text-ink"
             )}
             style={{ transition: "color 0.2s ease" }}
           >
@@ -47,7 +47,7 @@ function FaqItem({ question, answer, isOpen, onToggle, index }: FaqItemProps) {
         </div>
         <span
           className={cn(
-            "shrink-0 w-6 h-6 flex items-center justify-center text-[#7a7a7a]",
+            "shrink-0 w-6 h-6 flex items-center justify-center text-ink-muted",
             isOpen ? "rotate-45" : ""
           )}
           style={{ transition: "transform 0.2s ease" }}
@@ -66,7 +66,7 @@ function FaqItem({ question, answer, isOpen, onToggle, index }: FaqItemProps) {
         }}
       >
         <div style={{ overflow: "hidden" }}>
-          <p className="pl-10 pb-6 text-sm text-[#4a4a4a] leading-relaxed">
+          <p className="pl-10 pb-6 text-sm text-ink-secondary leading-relaxed">
             {answer}
           </p>
         </div>
@@ -103,7 +103,7 @@ export function FaqSection() {
           <Reveal once>
             <div
               role="list"
-              className="divide-y divide-[#e8e4df] border-t border-[#e8e4df]"
+              className="divide-y divide-border border-t border-border"
             >
               {items.map(({ q, a }, i) => (
                 <FaqItem

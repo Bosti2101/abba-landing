@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Link } from "@/lib/i18n/navigation";
 import { Container } from "@/components/ui/container";
 
@@ -8,7 +9,7 @@ export function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="bg-[#111111] text-white">
+    <footer className="bg-surface-dark text-white">
       <Container>
         <div className="pt-16 pb-8">
           {/* Top grid */}
@@ -16,9 +17,11 @@ export function Footer() {
             {/* Brand */}
             <div className="lg:col-span-1">
               <div className="mb-4">
-                <img
+                <Image
                   src="/logo.png"
                   alt="ABA Pergola Systems"
+                  width={120}
+                  height={40}
                   className="h-10 w-auto brightness-0 invert"
                 />
               </div>

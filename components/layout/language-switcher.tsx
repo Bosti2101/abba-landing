@@ -36,7 +36,7 @@ export function LanguageSwitcher({ inverted = false }: LanguageSwitcherProps) {
             <span
               className={cn(
                 "mx-1 text-xs",
-                inverted ? "text-white/30" : "text-[#ccc7c0]"
+                inverted ? "text-white/30" : "text-border-strong"
               )}
               aria-hidden
             >
@@ -54,10 +54,10 @@ export function LanguageSwitcher({ inverted = false }: LanguageSwitcherProps) {
               loc === locale
                 ? inverted
                   ? "text-white"
-                  : "text-[#c0392b]"
+                  : "text-brand"
                 : inverted
                 ? "text-white/50 hover:text-white"
-                : "text-[#7a7a7a] hover:text-[#1a1a1a]",
+                : "text-ink-muted hover:text-ink",
               "disabled:cursor-default"
             )}
           >

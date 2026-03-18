@@ -65,12 +65,12 @@ export function WinterGardensSection() {
 
   return (
     <section
-      className="section-y bg-[#1a1a1a] relative overflow-hidden"
+      className="section-y bg-ink relative overflow-hidden"
       aria-label="Winter gardens"
     >
       {/* Decorative diagonal accent */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-bl from-[#c0392b]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-bl from-brand/30 to-transparent" />
       </div>
 
       <Container>
@@ -110,7 +110,7 @@ export function WinterGardensSection() {
           <Reveal variants={fadeInRight}>
             <div className="relative aspect-[3/4] lg:aspect-auto lg:h-[600px] rounded-lg overflow-hidden">
               <Image
-                src="/images/pic2.jpeg"
+                src="/images/pic2.webp"
                 alt="Modern white house with elegant winter garden glass extension"
                 fill
                 className="object-cover"
@@ -119,7 +119,7 @@ export function WinterGardensSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
 
               {/* Floating label */}
-              <div className="absolute top-6 right-6 bg-[#c0392b] text-white text-xs font-semibold px-3 py-1.5 rounded-sm tracking-wide uppercase">
+              <div className="absolute top-6 right-6 bg-brand text-white text-xs font-semibold px-3 py-1.5 rounded-sm tracking-wide uppercase">
                 Winter Garden
               </div>
             </div>
