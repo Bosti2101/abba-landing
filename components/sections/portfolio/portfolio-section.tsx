@@ -38,7 +38,6 @@ export function PortfolioSection() {
         </Reveal>
       </Container>
 
-      {/* Carousel (full-bleed) */}
       <div className="relative mt-12">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
@@ -66,7 +65,6 @@ export function PortfolioSection() {
           </div>
         </div>
 
-        {/* Navigation arrows */}
         <Container>
           <div className="flex gap-3 mt-8">
             <button

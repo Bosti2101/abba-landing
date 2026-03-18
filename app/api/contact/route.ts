@@ -12,11 +12,9 @@ interface ContactBody {
   website?: string;
 }
 
-// Basic in-memory rate limiting: max 3 submissions per minute per IP
 const submissions = new Map<string, number[]>();
 
 export async function POST(req: NextRequest) {
-  // Rate limiting
   const ip = req.headers.get('x-forwarded-for') || 'unknown';
   const now = Date.now();
   const recent = (submissions.get(ip) || []).filter((t) => now - t < 60_000);
@@ -29,7 +27,6 @@ export async function POST(req: NextRequest) {
   recent.push(now);
   submissions.set(ip, recent);
 
-  // Parse & validate body
   let body: ContactBody;
   try {
     body = await req.json();
@@ -40,7 +37,6 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Honeypot check — reject if bot filled the hidden field
   if (body.website) {
     return NextResponse.json({ success: true });
   }
@@ -59,7 +55,6 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // Send email via Resend
   try {
     const { error } = await resend.emails.send({
       from: 'ABA Pergola <onboarding@resend.dev>',
@@ -116,7 +111,6 @@ function buildEmailHtml(body: ContactBody): string {
       <td align="center">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background-color:#1a1a1a;border-radius:12px;overflow:hidden;">
 
-          <!-- Header -->
           <tr>
             <td style="padding:32px 40px 24px;border-bottom:1px solid rgba(255,255,255,0.08);">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
@@ -133,21 +127,18 @@ function buildEmailHtml(body: ContactBody): string {
             </td>
           </tr>
 
-          <!-- Contact details -->
           <tr>
             <td style="padding:32px 40px 0;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:8px;overflow:hidden;">
                 <tr>
                   <td style="padding:20px 24px;">
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                      <!-- Name -->
                       <tr>
                         <td style="padding-bottom:16px;">
                           <span style="display:block;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:6px;">Nume</span>
                           <span style="display:block;font-size:15px;color:#ffffff;font-weight:500;">${name}</span>
                         </td>
                       </tr>
-                      <!-- Email -->
                       <tr>
                         <td style="padding-bottom:${phone || country ? '16px' : '0'};">
                           <span style="display:block;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:6px;">Email</span>
@@ -155,7 +146,6 @@ function buildEmailHtml(body: ContactBody): string {
                         </td>
                       </tr>
                       ${phone ? `
-                      <!-- Phone -->
                       <tr>
                         <td style="padding-bottom:${country ? '16px' : '0'};">
                           <span style="display:block;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:6px;">Telefon</span>
@@ -164,7 +154,6 @@ function buildEmailHtml(body: ContactBody): string {
                       </tr>
                       ` : ''}
                       ${country ? `
-                      <!-- Country -->
                       <tr>
                         <td>
                           <span style="display:block;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:6px;">Țară</span>
@@ -179,7 +168,6 @@ function buildEmailHtml(body: ContactBody): string {
             </td>
           </tr>
 
-          <!-- Message -->
           <tr>
             <td style="padding:24px 40px 0;">
               <span style="display:block;font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:12px;">Mesaj</span>
@@ -189,7 +177,6 @@ function buildEmailHtml(body: ContactBody): string {
             </td>
           </tr>
 
-          <!-- Footer -->
           <tr>
             <td style="padding:32px 40px;margin-top:16px;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;">

@@ -31,7 +31,6 @@ export function CustomSelect({
 
   const selected = options.find((option) => option.value === value);
 
-  // Close on outside click
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
@@ -42,7 +41,6 @@ export function CustomSelect({
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  // Reset active index when opening
   useEffect(() => {
     if (open) {
       const currentIdx = options.findIndex((option) => option.value === value);
@@ -102,7 +100,6 @@ export function CustomSelect({
     [open, activeIndex, options, selectOption],
   );
 
-  // Scroll active option into view
   useEffect(() => {
     if (open && listRef.current && activeIndex >= 0) {
       const items = listRef.current.querySelectorAll('[role="option"]');

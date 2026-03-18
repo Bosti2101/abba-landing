@@ -12,9 +12,7 @@ export function Footer() {
     <footer className="bg-surface-dark text-white">
       <Container>
         <div className="pt-16 pb-8">
-          {/* Top grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pb-12 border-b border-white/10">
-            {/* Brand */}
             <div className="lg:col-span-1">
               <div className="mb-4">
                 <Image
@@ -28,7 +26,6 @@ export function Footer() {
               <p className="text-white/50 text-sm leading-relaxed max-w-xs">
                 {t("tagline")}
               </p>
-              {/* Social icons placeholder */}
               <div className="flex gap-3 mt-6">
                 <a
                   href="https://facebook.com"
@@ -72,7 +69,6 @@ export function Footer() {
               </div>
             </div>
 
-            {/* Explore */}
             <div>
               <p className="text-xs font-semibold tracking-widest uppercase text-white/40 mb-5">
                 {t("exploreTitle")}
@@ -98,7 +94,6 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Support */}
             <div>
               <p className="text-xs font-semibold tracking-widest uppercase text-white/40 mb-5">
                 {t("supportTitle")}
@@ -106,7 +101,7 @@ export function Footer() {
               <ul className="flex flex-col gap-3">
                 {(
                   [
-                    { href: "/#contact", label: t("contact") },
+                    { href: "/contact", label: t("contact") },
                     { href: "/faq", label: t("faq") },
                   ] as const
                 ).map(({ href, label }) => (
@@ -125,7 +120,6 @@ export function Footer() {
 
           </div>
 
-          {/* Bottom */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-white/30">{t("copyright")}</p>
           </div>

@@ -54,9 +54,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <section className="section-y-sm bg-white">
         <Container>
-          {/* Two-column layout: left = full tall image, right = two stacked */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
-            {/* Left — larger image taking more width */}
             <div className="relative aspect-[3/4] lg:aspect-auto lg:col-span-3 rounded-xl overflow-hidden group">
               <Image
                 src={item.image}
@@ -69,7 +67,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
 
-            {/* Right — two stacked images */}
             <div className="lg:col-span-2 grid grid-cols-2 lg:grid-cols-1 gap-4">
               {images.slice(0, 2).map((img, i) => (
                 <div

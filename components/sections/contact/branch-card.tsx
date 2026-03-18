@@ -22,7 +22,6 @@ export function BranchCard({ branches }: BranchCardProps) {
 
   return (
     <div className='flex flex-col gap-6 p-8 bg-surface-warm rounded-xl border border-border h-full'>
-      {/* Branch tab switcher */}
       <div className='relative flex bg-border rounded-lg p-1'>
         <motion.div
           className='absolute top-1 bottom-1 rounded-[10px] bg-white shadow-sm'
@@ -48,7 +47,6 @@ export function BranchCard({ branches }: BranchCardProps) {
         ))}
       </div>
 
-      {/* Branch content — animated */}
       <AnimatePresence mode='wait'>
         <motion.div
           key={activeBranch}

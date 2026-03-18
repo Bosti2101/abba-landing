@@ -5,7 +5,7 @@ import { serviceItems } from "@/content/site-data";
 const BASE_URL = "https://abapergola.ro";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = ["", "/services", "/projects", "/faq"];
+  const staticPages = ["", "/services", "/projects", "/contact", "/faq"];
 
   const staticEntries = locales.flatMap((locale) =>
     staticPages.map((page) => ({

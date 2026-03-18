@@ -30,7 +30,6 @@ export function AboutSection() {
     >
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Text + Stats */}
           <Reveal variants={fadeInLeft}>
             <div className="flex flex-col gap-10">
               <SectionHeading
@@ -39,7 +38,6 @@ export function AboutSection() {
                 description={t("description")}
               />
 
-              {/* Stats grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map(({ labelKey, target, suffix }) => (
                   <div
@@ -63,7 +61,6 @@ export function AboutSection() {
             </div>
           </Reveal>
 
-          {/* Image */}
           <Reveal variants={fadeInRight}>
             <div className="relative aspect-[3/4] lg:aspect-auto lg:h-[580px] rounded-lg overflow-hidden">
               <Image
@@ -73,7 +70,6 @@ export function AboutSection() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              {/* Decorative accent */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand rounded-lg -z-10" />
             </div>
           </Reveal>

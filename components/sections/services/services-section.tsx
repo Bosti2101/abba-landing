@@ -43,7 +43,6 @@ export function ServicesSection() {
                 style={{ transition: "box-shadow 0.3s ease" }}
                 aria-label={t(item.title as "item1Title" | "item2Title" | "item3Title" | "item4Title")}
               >
-                {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={item.image}
@@ -54,7 +53,6 @@ export function ServicesSection() {
                   />
                 </div>
 
-                {/* Content */}
                 <div className="flex flex-col flex-1 p-6 gap-3">
                   <h3 className="font-semibold text-ink text-sm leading-snug">
                     {t(item.title as "item1Title" | "item2Title" | "item3Title" | "item4Title")}

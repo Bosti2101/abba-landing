@@ -18,7 +18,6 @@ export function EngineeringSection() {
     <section className="section-y-sm bg-surface-warm" aria-label="Engineering and design">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Text side */}
           <div className="flex flex-col gap-8">
             <Reveal variants={fadeInLeft}>
               <SectionHeading
@@ -52,7 +51,6 @@ export function EngineeringSection() {
             </motion.ul>
           </div>
 
-          {/* Images stacked */}
           <Reveal variants={fadeInRight}>
             <div className="flex flex-col gap-5">
               <div className="relative aspect-video rounded-lg overflow-hidden">

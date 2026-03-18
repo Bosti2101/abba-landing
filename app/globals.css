@@ -81,7 +81,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #111111;
+  background: var(--color-surface);
+  overflow-x: hidden;
 }
 
 body {

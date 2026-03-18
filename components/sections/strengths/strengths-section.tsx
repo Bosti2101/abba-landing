@@ -30,7 +30,6 @@ export function StrengthsSection() {
     <section className="section-y bg-white" aria-label="Our strengths">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* Images composition */}
           <Reveal variants={fadeInLeft}>
             <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
               <div className="relative aspect-[3/4] sm:aspect-square rounded-lg overflow-hidden col-span-1 row-span-2 lg:mt-16">
@@ -63,7 +62,6 @@ export function StrengthsSection() {
             </div>
           </Reveal>
 
-          {/* Text side */}
           <div className="flex flex-col gap-10">
             <Reveal variants={fadeInRight}>
               <SectionHeading

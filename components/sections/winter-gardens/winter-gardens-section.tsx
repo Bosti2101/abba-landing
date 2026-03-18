@@ -26,14 +26,12 @@ export function WinterGardensSection() {
       className="section-y bg-ink relative overflow-hidden"
       aria-label="Winter gardens"
     >
-      {/* Decorative diagonal accent */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-bl from-brand/30 to-transparent" />
       </div>
 
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Text side */}
           <Reveal variants={fadeInLeft}>
             <div className="flex flex-col gap-8">
               <SectionHeading
@@ -43,7 +41,6 @@ export function WinterGardensSection() {
                 inverted
               />
 
-              {/* Benefits grid */}
               <motion.div
                 className="grid grid-cols-1 sm:grid-cols-3 gap-4"
                 variants={staggerContainer}
@@ -64,7 +61,6 @@ export function WinterGardensSection() {
             </div>
           </Reveal>
 
-          {/* Image side */}
           <Reveal variants={fadeInRight}>
             <div className="relative aspect-[3/4] lg:aspect-auto lg:h-[600px] rounded-lg overflow-hidden">
               <Image
@@ -76,7 +72,6 @@ export function WinterGardensSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
 
-              {/* Floating label */}
               <div className="absolute top-6 right-6 bg-brand text-white text-xs font-semibold px-3 py-1.5 rounded-sm tracking-wide uppercase">
                 Winter Garden
               </div>

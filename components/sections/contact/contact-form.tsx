@@ -23,7 +23,6 @@ export function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Auto-reset form after success
   useEffect(() => {
     if (!submitted) return;
     const timer = setTimeout(() => setSubmitted(false), 5000);
@@ -180,7 +179,6 @@ export function ContactForm() {
               className='flex flex-col gap-5'
               noValidate
             >
-              {/* Honeypot — hidden from users, catches bots */}
               <input
                 type='text'
                 name='website'

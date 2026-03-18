@@ -53,7 +53,6 @@ export function Header() {
   return (
     <>
       <header className='fixed top-0 left-0 right-0 z-50'>
-        {/* Background layer — fades in/out smoothly */}
         <div
           className={cn(
             'absolute inset-0 bg-white border-b border-border shadow-sm',
@@ -64,12 +63,7 @@ export function Header() {
 
         <div className='container-site relative'>
           <div className='flex items-center justify-between h-16 md:h-20'>
-            {/* Logo */}
-            <Link
-              href='/'
-              className='block'
-              aria-label='ABA Pergola Systems'
-            >
+            <Link href='/' className='block' aria-label='ABA Pergola Systems'>
               <Image
                 src='/logo.png'
                 alt='ABA Pergola Systems'
@@ -83,7 +77,6 @@ export function Header() {
               />
             </Link>
 
-            {/* Desktop Nav */}
             <nav
               className='hidden lg:flex items-center gap-7'
               aria-label='Main navigation'
@@ -126,7 +119,6 @@ export function Header() {
               ))}
             </nav>
 
-            {/* Right side */}
             <div className='hidden lg:flex items-center gap-6'>
               <LanguageSwitcher inverted={!scrolled} />
               <Link
@@ -152,7 +144,6 @@ export function Header() {
               </Link>
             </div>
 
-            {/* Mobile menu button */}
             <div className='flex lg:hidden items-center gap-4'>
               <LanguageSwitcher inverted={!scrolled} />
               <button
@@ -191,7 +182,6 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
       <div
         className={cn(
           'fixed inset-0 z-40 lg:hidden transition-all duration-300',
@@ -254,9 +244,7 @@ export function Header() {
                 }
                 className={cn(
                   'py-3 text-base font-medium border-b border-surface-mid transition-colors duration-200',
-                  isActive(href)
-                    ? 'text-brand'
-                    : 'text-ink hover:text-brand',
+                  isActive(href) ? 'text-brand' : 'text-ink hover:text-brand',
                 )}
               >
                 {label}

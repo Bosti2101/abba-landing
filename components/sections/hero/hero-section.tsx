@@ -35,7 +35,7 @@ export function HeroSection() {
 
   return (
     <section
-      className='relative min-h-screen flex flex-col overflow-hidden'
+      className='relative min-h-dvh flex flex-col overflow-hidden'
       aria-label='Hero section'
     >
       <style>{`
@@ -43,10 +43,10 @@ export function HeroSection() {
           position: absolute;
           inset: 0;
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          will-change: clip-path;
           overflow: hidden;
         }
         .hero-slide--active {
+          will-change: clip-path;
           animation: hero-wipe ${WIPE_DURATION}s cubic-bezier(0.65, 0, 0.35, 1) forwards !important;
         }
         .hero-slide--first {
@@ -56,6 +56,7 @@ export function HeroSection() {
           width: 100%;
           height: 100%;
           transform: scale(1);
+          will-change: transform;
         }
         .hero-zoom--running {
           animation: hero-kb ${ZOOM_DURATION}s linear infinite !important;
@@ -76,7 +77,6 @@ export function HeroSection() {
         }
       `}</style>
 
-      {/* Background slides */}
       <div className='absolute inset-0' style={{ zIndex: 0 }}>
         {heroSlides.map((slide, i) => {
           const isActive = i === slides.active;
@@ -101,39 +101,25 @@ export function HeroSection() {
                 slide={slide}
                 index={i}
                 isActive={isActive}
+                isShown={isShown}
               />
             </div>
           );
         })}
 
-        {/* Overlays */}
         <div
           className='absolute inset-0 pointer-events-none'
           style={{
             zIndex: 3,
-            background:
-              'linear-gradient(180deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.85) 100%)',
-          }}
-        />
-        <div
-          className='absolute inset-0 pointer-events-none'
-          style={{
-            zIndex: 3,
-            background:
-              'linear-gradient(135deg, rgba(192,57,43,0.12) 0%, transparent 50%, rgba(0,0,0,0.4) 100%)',
-          }}
-        />
-        <div
-          className='absolute inset-0 pointer-events-none'
-          style={{
-            zIndex: 3,
-            background:
-              'radial-gradient(ellipse 80% 100% at 0% 50%, rgba(0,0,0,0.55) 0%, transparent 70%)',
+            background: `
+              linear-gradient(180deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.85) 100%),
+              linear-gradient(135deg, rgba(192,57,43,0.12) 0%, transparent 50%, rgba(0,0,0,0.4) 100%),
+              radial-gradient(ellipse 80% 100% at 0% 50%, rgba(0,0,0,0.55) 0%, transparent 70%)
+            `,
           }}
         />
       </div>
 
-      {/* Content */}
       <div
         className='container-site flex-1 flex flex-col justify-center pt-32 pb-24 relative'
         style={{ zIndex: 4 }}
@@ -195,12 +181,20 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div
         className='absolute bottom-44 md:bottom-24 left-1/2 -translate-x-1/2'
         style={{ zIndex: 4 }}
         aria-hidden='true'
       >
+        <style>{`
+          @keyframes hero-chevron {
+            0%, 100% { opacity: 0.15; }
+            50% { opacity: 0.6; }
+          }
+          .hero-chevron {
+            animation: hero-chevron 1.6s ease-in-out infinite !important;
+          }
+        `}</style>
         <motion.div
           className='flex flex-col items-center gap-2 text-white/40'
           initial={{ opacity: 0 }}
@@ -212,7 +206,7 @@ export function HeroSection() {
           </span>
           <div className='flex flex-col items-center gap-0'>
             {[0, 1, 2].map((i) => (
-              <motion.svg
+              <svg
                 key={i}
                 width='16'
                 height='10'
@@ -222,17 +216,11 @@ export function HeroSection() {
                 strokeWidth='1.5'
                 strokeLinecap='round'
                 strokeLinejoin='round'
-                className='-my-0.5'
-                animate={{ opacity: [0.15, 0.6, 0.15] }}
-                transition={{
-                  duration: 1.6,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                  delay: i * 0.25,
-                }}
+                className='hero-chevron -my-0.5'
+                style={{ animationDelay: `${i * 0.25}s` }}
               >
                 <path d='M2 2l8 8 8-8' />
-              </motion.svg>
+              </svg>
             ))}
           </div>
         </motion.div>
@@ -242,4 +230,3 @@ export function HeroSection() {
     </section>
   );
 }
-
