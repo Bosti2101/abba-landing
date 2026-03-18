@@ -37,11 +37,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           "focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand focus-visible:outline-offset-2",
           "disabled:opacity-50 disabled:cursor-not-allowed",
           "cursor-pointer select-none",
+          "transition-all duration-200 ease-out",
           variantStyles[variant],
           sizeStyles[size],
           className
         )}
-        style={{ transition: "all 0.2s ease-out", ...props.style }}
+        style={props.style}
         {...props}
       >
         {children}

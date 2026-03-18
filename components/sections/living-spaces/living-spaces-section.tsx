@@ -22,6 +22,7 @@ export function LivingSpacesSection() {
                 src="/images/pic1.webp"
                 alt="Spacious enclosed terrace with glass walls and pergola roof"
                 fill
+                priority
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
@@ -32,10 +33,10 @@ export function LivingSpacesSection() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-ink leading-tight">
-                      All-Season Comfort
+                      {t("accentTitle")}
                     </p>
                     <p className="text-xs text-ink-muted mt-0.5">
-                      365 days of outdoor living
+                      {t("accentDesc")}
                     </p>
                   </div>
                 </div>

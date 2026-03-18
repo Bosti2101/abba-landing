@@ -5,7 +5,12 @@
     "services": "Servicii",
     "projects": "Proiecte",
     "contact": "Contact",
-    "cta": "Solicită Ofertă"
+    "cta": "Solicită Ofertă",
+    "menu": "Meniu",
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul",
+    "mapBulgaria": "Hartă pentru sucursala din Bulgaria",
+    "mapRomania": "Hartă pentru sucursala din România"
   },
   "hero": {
     "title": "Soluții Premium de Pergole și Sticlă",
@@ -21,7 +26,9 @@
     "cta": "Explorează Pergolele",
     "feature1": "Izolare termică superioară",
     "feature2": "Design personalizat",
-    "feature3": "Materiale premium"
+    "feature3": "Materiale premium",
+    "accentTitle": "Confort Tot Anul",
+    "accentDesc": "365 de zile de viață în aer liber"
   },
   "winterGardens": {
     "label": "Grădini de Iarnă",
@@ -33,7 +40,8 @@
     "benefit2Title": "Confort termic",
     "benefit2Desc": "Temperatură plăcută indiferent de sezon",
     "benefit3Title": "Spațiu extins",
-    "benefit3Desc": "Prelungiți suprafața locuibilă"
+    "benefit3Desc": "Prelungiți suprafața locuibilă",
+    "badge": "Grădină de Iarnă"
   },
   "about": {
     "label": "Despre Noi",
@@ -102,6 +110,9 @@
     "formSending": "Se trimite...",
     "formSuccess": "Mesajul a fost trimis cu succes!",
     "formError": "Ceva nu a funcționat. Vă rugăm să încercați din nou.",
+    "formErrorQuota": "Serviciul de mesagerie este temporar indisponibil. Vă rugăm să încercați mai târziu sau să ne contactați direct telefonic.",
+    "formErrorRateLimit": "Prea multe cereri. Vă rugăm să așteptați un moment și să încercați din nou.",
+    "formErrorMissingFields": "Vă rugăm să completați toate câmpurile obligatorii.",
     "validationRequired": "Acest câmp este obligatoriu.",
     "validationEmail": "Adresa de email nu este validă.",
     "validationNameLetters": "Numele poate conține doar litere.",
@@ -130,7 +141,7 @@
     "subscribeDesc": "Fii la curent cu cele mai noi design-uri și oferte ABA Pergola!",
     "subscribePlaceholder": "Adresa ta de email",
     "subscribeBtn": "Abonează-te",
-    "copyright": "© 2025 ABA Pergola Systems. Toate drepturile rezervate."
+    "copyright": "© {year} ABA Pergola Systems. Toate drepturile rezervate."
   },
   "pages": {
     "homeTitle": "ABA Pergola Systems — Soluții Premium de Pergole",
@@ -142,7 +153,16 @@
     "projectsTitle": "Proiecte — ABA Pergola Systems",
     "projectsDesc": "Galeria proiectelor noastre realizate în România și Bulgaria.",
     "contactTitle": "Contact — ABA Pergola Systems",
-    "contactDesc": "Contactați echipa ABA Pergola Systems pentru consultanță și ofertă personalizată."
+    "contactDesc": "Contactați echipa ABA Pergola Systems pentru consultanță și ofertă personalizată.",
+    "notFoundTitle": "Pagină negăsită — ABA Pergola Systems",
+    "notFoundHeading": "Pagină negăsită",
+    "notFoundDesc": "Pagina pe care o căutați nu există sau a fost mutată. Hai să vă aducem înapoi pe drumul cel bun.",
+    "notFoundHome": "Acasă",
+    "notFoundContact": "Contactați-ne",
+    "errorTitle": "Eroare — ABA Pergola Systems",
+    "errorHeading": "Ceva nu a funcționat",
+    "errorDesc": "A apărut o eroare neașteptată. Vă rugăm să încercați din nou sau să reveniți la pagina principală.",
+    "errorRetry": "Încearcă din nou"
   },
   "services": {
     "label": "Serviciile Noastre",

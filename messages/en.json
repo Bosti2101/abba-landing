@@ -5,7 +5,12 @@
     "services": "Services",
     "projects": "Projects",
     "contact": "Contact",
-    "cta": "Get an Offer"
+    "cta": "Get an Offer",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mapBulgaria": "Map for Bulgaria branch",
+    "mapRomania": "Map for Romania branch"
   },
   "hero": {
     "title": "Premium Pergola & Glass Solutions",
@@ -21,7 +26,9 @@
     "cta": "Explore Pergolas",
     "feature1": "Superior thermal insulation",
     "feature2": "Custom design",
-    "feature3": "Premium materials"
+    "feature3": "Premium materials",
+    "accentTitle": "All-Season Comfort",
+    "accentDesc": "365 days of outdoor living"
   },
   "winterGardens": {
     "label": "Winter Gardens",
@@ -33,7 +40,8 @@
     "benefit2Title": "Thermal comfort",
     "benefit2Desc": "Pleasant temperature every season",
     "benefit3Title": "Extended space",
-    "benefit3Desc": "Increase livable area"
+    "benefit3Desc": "Increase livable area",
+    "badge": "Winter Garden"
   },
   "about": {
     "label": "About Us",
@@ -102,6 +110,9 @@
     "formSending": "Sending...",
     "formSuccess": "Your message has been sent successfully!",
     "formError": "Something went wrong. Please try again.",
+    "formErrorQuota": "Our messaging service is temporarily unavailable. Please try again later or contact us directly by phone.",
+    "formErrorRateLimit": "Too many requests. Please wait a moment and try again.",
+    "formErrorMissingFields": "Please fill in all required fields.",
     "validationRequired": "This field is required.",
     "validationEmail": "Please enter a valid email address.",
     "validationNameLetters": "Name can only contain letters.",
@@ -130,7 +141,7 @@
     "subscribeDesc": "Stay up to date with the latest ABA Pergola designs and offers!",
     "subscribePlaceholder": "Your email address",
     "subscribeBtn": "Subscribe",
-    "copyright": "© 2025 ABA Pergola Systems. All rights reserved."
+    "copyright": "© {year} ABA Pergola Systems. All rights reserved."
   },
   "pages": {
     "homeTitle": "ABA Pergola Systems — Premium Pergola Solutions",
@@ -142,7 +153,16 @@
     "projectsTitle": "Projects — ABA Pergola Systems",
     "projectsDesc": "Gallery of our completed projects in Romania and Bulgaria.",
     "contactTitle": "Contact — ABA Pergola Systems",
-    "contactDesc": "Get in touch with the ABA Pergola Systems team for consultation and a personalised quote."
+    "contactDesc": "Get in touch with the ABA Pergola Systems team for consultation and a personalised quote.",
+    "notFoundTitle": "Page Not Found — ABA Pergola Systems",
+    "notFoundHeading": "Page Not Found",
+    "notFoundDesc": "The page you are looking for doesn't exist or has been moved. Let's get you back on track.",
+    "notFoundHome": "Go Home",
+    "notFoundContact": "Contact Us",
+    "errorTitle": "Error — ABA Pergola Systems",
+    "errorHeading": "Something Went Wrong",
+    "errorDesc": "An unexpected error occurred. Please try again or go back to the homepage.",
+    "errorRetry": "Try Again"
   },
   "services": {
     "label": "Our Services",

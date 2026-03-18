@@ -52,14 +52,18 @@ export function ContactForm() {
       errors.email = t('validationEmail');
     }
 
-    if (form.phone.trim()) {
-      if (form.phone.trim().length < 3) {
-        errors.phone = t('validationMinChars', { min: 3 });
-      } else if (!/^[\d\s+\-()]+$/.test(form.phone)) {
-        errors.phone = t('validationPhoneDigits');
-      } else if (form.phone.length > 160) {
-        errors.phone = t('validationMaxChars', { max: 160 });
-      }
+    if (!form.phone.trim()) {
+      errors.phone = t('validationRequired');
+    } else if (form.phone.trim().length < 3) {
+      errors.phone = t('validationMinChars', { min: 3 });
+    } else if (!/^[\d\s+\-()]+$/.test(form.phone)) {
+      errors.phone = t('validationPhoneDigits');
+    } else if (form.phone.length > 160) {
+      errors.phone = t('validationMaxChars', { max: 160 });
+    }
+
+    if (!form.country.trim()) {
+      errors.country = t('validationRequired');
     }
 
     if (!form.message.trim()) {
@@ -97,7 +101,19 @@ export function ContactForm() {
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data.error || t('formError'));
+        const errorCode = data.error;
+        const errorMessages: Record<string, string> = {
+          QUOTA_EXCEEDED: t('formErrorQuota'),
+          RATE_LIMITED: t('formErrorRateLimit'),
+          MISSING_FIELDS: t('formErrorMissingFields'),
+          INVALID_NAME: t('validationNameLetters'),
+          INVALID_EMAIL: t('validationEmail'),
+          INVALID_PHONE: t('validationPhoneDigits'),
+          INVALID_MESSAGE: t('formError'),
+          INVALID_REQUEST: t('formError'),
+          SEND_FAILED: t('formError'),
+        };
+        throw new Error(errorMessages[errorCode] || t('formError'));
       }
 
       setSubmitted(true);

@@ -10,19 +10,20 @@ import { ContactForm } from './contact-form';
 
 export function ContactSection() {
   const t = useTranslations('contact');
+  const tNav = useTranslations('nav');
 
   const branches = [
     {
       data: contactBranches[0],
       label: t('bulgariaBranch'),
       address: t('bulgariaAddress'),
-      mapTitle: 'Map for Bulgaria branch',
+      mapTitle: tNav('mapBulgaria'),
     },
     {
       data: contactBranches[1],
       label: t('romaniaBranch'),
       address: t('romaniaAddress'),
-      mapTitle: 'Map for Romania branch',
+      mapTitle: tNav('mapRomania'),
     },
   ];
 

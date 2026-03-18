@@ -73,7 +73,7 @@ export function WinterGardensSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
 
               <div className="absolute top-6 right-6 bg-brand text-white text-xs font-semibold px-3 py-1.5 rounded-sm tracking-wide uppercase">
-                Winter Garden
+                {t("badge")}
               </div>
             </div>
           </Reveal>

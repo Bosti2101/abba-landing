@@ -32,20 +32,18 @@ export function FaqItem({ question, answer, isOpen, onToggle, index }: FaqItemPr
           </span>
           <span
             className={cn(
-              'text-base font-semibold',
+              'text-base font-semibold transition-colors duration-200',
               isOpen ? 'text-brand' : 'text-ink',
             )}
-            style={{ transition: 'color 0.2s ease' }}
           >
             {question}
           </span>
         </div>
         <span
           className={cn(
-            'shrink-0 w-6 h-6 flex items-center justify-center text-ink-muted',
+            'shrink-0 w-6 h-6 flex items-center justify-center text-ink-muted transition-transform duration-200',
             isOpen ? 'rotate-45' : '',
           )}
-          style={{ transition: 'transform 0.2s ease' }}
         >
           <svg width='14' height='14' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth='2'>
             <path d='M12 5v14M5 12h14' strokeLinecap='round' />

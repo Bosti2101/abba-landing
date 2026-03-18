@@ -59,12 +59,10 @@ export function BranchCard({ branches }: BranchCardProps) {
           <div className='flex flex-col gap-4 items-start'>
             <a
               href={`mailto:${branches[activeBranch].data.email}`}
-              className='inline-flex items-center gap-3 text-sm text-ink-secondary hover:text-brand group'
-              style={{ transition: 'color 0.2s ease' }}
+              className='inline-flex items-center gap-3 text-sm text-ink-secondary hover:text-brand group transition-colors duration-200'
             >
               <span
-                className='w-8 h-8 bg-white rounded-md border border-border flex items-center justify-center text-brand group-hover:bg-brand group-hover:text-white group-hover:border-brand shrink-0'
-                style={{ transition: 'all 0.2s ease' }}
+                className='w-8 h-8 bg-white rounded-md border border-border flex items-center justify-center text-brand group-hover:bg-brand group-hover:text-white group-hover:border-brand shrink-0 transition-all duration-200'
               >
                 <MailIcon />
               </span>
@@ -73,12 +71,10 @@ export function BranchCard({ branches }: BranchCardProps) {
 
             <a
               href={`tel:${branches[activeBranch].data.phone.replace(/\s/g, '')}`}
-              className='inline-flex items-center gap-3 text-sm text-ink-secondary hover:text-brand group'
-              style={{ transition: 'color 0.2s ease' }}
+              className='inline-flex items-center gap-3 text-sm text-ink-secondary hover:text-brand group transition-colors duration-200'
             >
               <span
-                className='w-8 h-8 bg-white rounded-md border border-border flex items-center justify-center text-brand group-hover:bg-brand group-hover:text-white group-hover:border-brand shrink-0'
-                style={{ transition: 'all 0.2s ease' }}
+                className='w-8 h-8 bg-white rounded-md border border-border flex items-center justify-center text-brand group-hover:bg-brand group-hover:text-white group-hover:border-brand shrink-0 transition-all duration-200'
               >
                 <PhoneIcon />
               </span>

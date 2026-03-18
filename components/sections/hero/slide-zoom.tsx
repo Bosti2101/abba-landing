@@ -25,7 +25,7 @@ export function SlideZoom({
   return (
     <div
       key={`zoom-${index}-${mountKey.current}`}
-      className={`hero-zoom${isShown ? ' hero-zoom--running' : ''}`}
+      className={`hero-zoom relative${isShown ? ' hero-zoom--running' : ''}`}
     >
       <Image
         src={slide.src}

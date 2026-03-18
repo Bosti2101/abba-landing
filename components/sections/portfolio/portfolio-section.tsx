@@ -18,7 +18,7 @@ export function PortfolioSection() {
       align: "start",
       slidesToScroll: 1,
     },
-    [Autoplay({ delay: 4000, stopOnInteraction: true })],
+    [Autoplay({ delay: 2000, stopOnInteraction: true })],
   );
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
@@ -70,8 +70,7 @@ export function PortfolioSection() {
             <button
               onClick={scrollPrev}
               aria-label="Previous"
-              className="w-11 h-11 rounded-sm border border-border flex items-center justify-center text-ink-secondary hover:border-brand hover:text-brand cursor-pointer"
-              style={{ transition: "all 0.2s ease" }}
+              className="w-11 h-11 rounded-sm border border-border flex items-center justify-center text-ink-secondary hover:border-brand hover:text-brand cursor-pointer transition-all duration-200"
             >
               <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                 <path d="M19 12H5M12 5l-7 7 7 7" strokeLinecap="round" strokeLinejoin="round" />
@@ -80,8 +79,7 @@ export function PortfolioSection() {
             <button
               onClick={scrollNext}
               aria-label="Next"
-              className="w-11 h-11 rounded-sm border border-border flex items-center justify-center text-ink-secondary hover:border-brand hover:text-brand cursor-pointer"
-              style={{ transition: "all 0.2s ease" }}
+              className="w-11 h-11 rounded-sm border border-border flex items-center justify-center text-ink-secondary hover:border-brand hover:text-brand cursor-pointer transition-all duration-200"
             >
               <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
                 <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
