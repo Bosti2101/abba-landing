@@ -64,7 +64,7 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold tracking-widest uppercase text-white/40 mb-5">
+              <p className="text-xs font-semibold tracking-widest uppercase text-white/60 mb-5">
                 {t("exploreTitle")}
               </p>
               <ul className="flex flex-col gap-3">
@@ -88,7 +88,7 @@ export function Footer() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold tracking-widest uppercase text-white/40 mb-5">
+              <p className="text-xs font-semibold tracking-widest uppercase text-white/60 mb-5">
                 {t("supportTitle")}
               </p>
               <ul className="flex flex-col gap-3">
@@ -113,7 +113,7 @@ export function Footer() {
           </div>
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-white/30">{t("copyright", { year: new Date().getFullYear() })}</p>
+            <p className="text-xs text-white/50">{t("copyright", { year: new Date().getFullYear() })}</p>
           </div>
         </div>
       </Container>

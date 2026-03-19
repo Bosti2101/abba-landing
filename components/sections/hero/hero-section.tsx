@@ -158,13 +158,13 @@ export function HeroSection() {
           </motion.p>
 
           <motion.div
-            className='mt-10 flex flex-wrap gap-4'
+            className='mt-10 flex flex-wrap gap-3 sm:gap-4'
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
           >
             <Link href='/services'>
-              <Button size='lg' variant='primary'>
+              <Button size='lg' variant='primary' className='min-h-[48px]'>
                 {t('cta')}
               </Button>
             </Link>
@@ -172,7 +172,7 @@ export function HeroSection() {
               <Button
                 size='lg'
                 variant='outline'
-                className='border-white/40 text-white hover:bg-white/10 hover:border-white/60'
+                className='min-h-[48px] border-white/40 text-white hover:bg-white/10 hover:border-white/60'
               >
                 {t('ctaProjects')}
               </Button>
