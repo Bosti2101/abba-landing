@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils/cn';
+import { FieldError } from './field-error';
 
 interface SelectOption {
   value: string;
@@ -15,6 +16,7 @@ interface CustomSelectProps {
   value: string;
   onChange: (v: string) => void;
   options: SelectOption[];
+  error?: string;
 }
 
 export function CustomSelect({
@@ -23,6 +25,7 @@ export function CustomSelect({
   value,
   onChange,
   options,
+  error,
 }: CustomSelectProps) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -130,7 +133,7 @@ export function CustomSelect({
           onKeyDown={handleKeyDown}
           className='w-full bg-white/10 rounded-sm px-4 py-3 text-sm text-left flex items-center justify-between'
           style={{
-            border: '1px solid rgba(255,255,255,0.15)',
+            border: error ? '1px solid var(--color-error)' : '1px solid rgba(255,255,255,0.15)',
             transition: 'border-color 0.2s ease',
             color: selected ? '#ffffff' : 'rgba(255,255,255,0.35)',
           }}
@@ -201,6 +204,7 @@ export function CustomSelect({
           )}
         </AnimatePresence>
       </div>
+      <FieldError message={error} id='country-error' />
     </div>
   );
 }

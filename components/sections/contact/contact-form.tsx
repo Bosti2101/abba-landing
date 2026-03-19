@@ -249,7 +249,11 @@ export function ContactForm() {
                   label={t('formCountry')}
                   placeholder={t('countryPlaceholder')}
                   value={form.country}
-                  onChange={(value) => setForm((prev) => ({ ...prev, country: value }))}
+                  error={fieldErrors.country}
+                  onChange={(value) => {
+                    setForm((prev) => ({ ...prev, country: value }));
+                    setFieldErrors((prev) => ({ ...prev, country: '' }));
+                  }}
                   options={[
                     { value: 'romania', label: t('countryRomania') },
                     { value: 'bulgaria', label: t('countryBulgaria') },

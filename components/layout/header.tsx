@@ -16,6 +16,7 @@ export function Header({ forceSolid = false }: { forceSolid?: boolean } = {}) {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
