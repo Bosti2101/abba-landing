@@ -44,6 +44,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale || "ro"} suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className={`${inter.variable} antialiased`}>{children}</body>
     </html>
   );
