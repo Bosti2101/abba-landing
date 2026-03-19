@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abapergola.ro"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://abapergola.ro"),
   title: "ABA Pergola Systems",
   description: "Premium pergola and glass solutions for your home and business.",
   icons: {
