@@ -20,9 +20,9 @@ export function AboutSection() {
   const isInView = useInView(sectionRef, { once: false, margin: "-100px" });
 
   const stats = [
-    { valueKey: t("stat1Value"), labelKey: t("stat1Label"), target: 1500, suffix: "m²" },
-    { valueKey: t("stat2Value"), labelKey: t("stat2Label"), target: 258, suffix: "" },
-    { valueKey: t("stat3Value"), labelKey: t("stat3Label"), target: 9, suffix: "" },
+    { valueKey: t("stat1Value"), labelKey: t("stat1Label"), target: 15000, suffix: "m²" },
+    { valueKey: t("stat2Value"), labelKey: t("stat2Label"), target: 350, suffix: "" },
+    { valueKey: t("stat3Value"), labelKey: t("stat3Label"), target: 18, suffix: "" },
     { valueKey: t("stat4Value"), labelKey: t("stat4Label"), target: 200, suffix: "" },
   ];
 

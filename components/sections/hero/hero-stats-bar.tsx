@@ -8,10 +8,10 @@ export function HeroStatsBar() {
   const t = useTranslations('about');
 
   const stats = [
-    { value: '1500+', label: t('stat1Label') },
-    { value: '258+', label: t('stat2Label') },
-    { value: '9', label: t('stat3Label') },
-    { value: '200+', label: t('stat4Label') },
+    { value: `${t('stat1Value')}+`, label: t('stat1Label') },
+    { value: `${t('stat2Value')}+`, label: t('stat2Label') },
+    { value: t('stat3Value'), label: t('stat3Label') },
+    { value: `${t('stat4Value')}+`, label: t('stat4Label') },
   ];
 
   return (

@@ -6,9 +6,9 @@ import type {
 } from "@/types/content";
 
 export const aboutStats: StatItem[] = [
-  { value: "1500", label: "stat1Label", suffix: "+" },
-  { value: "258", label: "stat2Label", suffix: "+" },
-  { value: "9", label: "stat3Label", suffix: "" },
+  { value: "15000", label: "stat1Label", suffix: "+" },
+  { value: "350", label: "stat2Label", suffix: "+" },
+  { value: "18", label: "stat3Label", suffix: "" },
   { value: "200", label: "stat4Label", suffix: "+" },
 ];
 
@@ -82,19 +82,19 @@ export const portfolioCategories: PortfolioCategory[] = [
 export const contactBranches: ContactBranch[] = [
   {
     name: "bulgariaBranch",
-    email: "office@abapergola.bg",
-    phone: "+359 2 123 4567",
+    email: "h.gyudzhen@abapergola.ro",
+    phone: "+359 89 539 39 00",
     address: "bulgariaAddress",
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93438.96024764498!2d23.2539071!3d42.6977082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8682cb317bf5%3A0x400a01269bf5e60!2sSofia%2C%20Bulgaria!5e0!3m2!1sen!2s!4v1700000000000",
+      "https://maps.google.com/maps?q=Varna%2C+ul.+Radost+9%2C+Bulgaria&output=embed&z=13",
   },
   {
     name: "romaniaBranch",
-    email: "office@abapergola.ro",
-    phone: "+40 748 123 456",
+    email: "info@abapergola.ro",
+    phone: "+40 757 032 748",
     address: "romaniaAddress",
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91158.63080702834!2d26.0322432!3d44.4267674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f93abf3cad4f%3A0xac0632e37c9ca628!2sBucharest%2C%20Romania!5e0!3m2!1sen!2s!4v1700000000000",
+      "https://maps.google.com/maps?q=Comuna+Slatioara%2C+Strada+Unirii+7%2C+Judet+Olt%2C+Romania&output=embed&z=13",
   },
 ];
 
