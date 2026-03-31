@@ -10,6 +10,7 @@ import { EngineeringSection } from "@/components/sections/engineering/engineerin
 import { PortfolioSection } from "@/components/sections/portfolio/portfolio-section";
 import { ServicesSection } from "@/components/sections/services/services-section";
 import { ContactSection } from "@/components/sections/contact/contact-section";
+import { PartnersSection } from "@/components/sections/partners/partners-section";
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -64,6 +65,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <EngineeringSection />
       <ServicesSection />
       <PortfolioSection />
+      <PartnersSection />
       <ContactSection />
     </>
   );

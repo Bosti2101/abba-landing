@@ -124,6 +124,10 @@
     "countryBulgaria": "Bulgaria",
     "countryPlaceholder": "Select country"
   },
+  "partners": {
+    "label": "Trusted Partners",
+    "title": "Brands We Work With"
+  },
   "footer": {
     "tagline": "Premium pergola solutions for elegant outdoor spaces.",
     "exploreTitle": "Explore",
