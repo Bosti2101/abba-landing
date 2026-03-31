@@ -163,18 +163,18 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
           >
-            <Link href='/services'>
-              <Button size='lg' variant='primary' className='min-h-[48px]'>
-                {t('cta')}
+            <Link href='/projects'>
+              <Button size='sm' variant='primary' className='min-h-[44px] sm:min-h-[48px] sm:text-base sm:px-6'>
+                {t('ctaProjects')}
               </Button>
             </Link>
-            <Link href='/projects'>
+            <Link href='/services'>
               <Button
-                size='lg'
+                size='sm'
                 variant='outline'
-                className='min-h-[48px] border-white/40 text-white hover:bg-white/10 hover:border-white/60'
+                className='min-h-[44px] sm:min-h-[48px] sm:text-base sm:px-6 border-white/40 text-white hover:bg-white/10 hover:border-white/60'
               >
-                {t('ctaProjects')}
+                {t('cta')}
               </Button>
             </Link>
           </motion.div>
