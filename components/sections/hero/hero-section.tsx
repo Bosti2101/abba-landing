@@ -10,9 +10,10 @@ import { SlideZoom } from './slide-zoom';
 import { HeroStatsBar } from './hero-stats-bar';
 
 const heroSlides = [
-  { src: '/images/hero.webp', alt: 'Premium pergola over outdoor pool at dusk' },
-  { src: '/images/hero2.webp', alt: 'Modern pergola system with elegant design' },
-  { src: '/images/hero4.webp', alt: 'Bioclimatic pergola with glass walls' },
+  { src: '/hero/hero-4.webp', alt: 'ABA Pergola Systems' },
+  { src: '/hero/hero-1.webp', alt: 'ABA Pergola Systems' },
+  { src: '/hero/hero-2.webp', alt: 'ABA Pergola Systems' },
+  { src: '/hero/hero-3.webp', alt: 'ABA Pergola Systems' },
 ];
 
 const SLIDE_INTERVAL = 5;
@@ -94,7 +95,7 @@ export function HeroSection() {
               )}
               style={{
                 zIndex: isActive ? 2 : isPrevious ? 1 : 0,
-                visibility: isShown ? 'visible' : 'hidden',
+                visibility: 'visible',
               }}
             >
               <SlideZoom

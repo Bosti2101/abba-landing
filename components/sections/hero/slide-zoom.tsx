@@ -31,7 +31,7 @@ export function SlideZoom({
         src={slide.src}
         alt={slide.alt}
         fill
-        priority={index === 0}
+        priority
         className='object-cover'
         sizes='100vw'
       />
