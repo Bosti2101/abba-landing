@@ -50,22 +50,18 @@ export function Lightbox({
       if (e.key === "ArrowLeft") goPrev();
     };
 
-    const scrollY = window.scrollY;
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
+    const preventScroll = (e: TouchEvent) => {
+      if (e.cancelable) e.preventDefault();
+    };
+
     document.body.style.overflow = "hidden";
+    document.addEventListener("touchmove", preventScroll, { passive: false });
     overlayRef.current?.focus();
     window.addEventListener("keydown", onKeyDown);
 
     return () => {
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.left = "";
-      document.body.style.right = "";
       document.body.style.overflow = "";
-      window.scrollTo(0, scrollY);
+      document.removeEventListener("touchmove", preventScroll);
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [open, onClose, goNext, goPrev]);
