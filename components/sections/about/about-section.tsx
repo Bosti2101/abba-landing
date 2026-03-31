@@ -80,7 +80,6 @@ export function AboutSection() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </button>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand rounded-lg -z-10" />
             </div>
           </Reveal>
         </div>
