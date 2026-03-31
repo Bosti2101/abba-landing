@@ -66,7 +66,7 @@ export function AboutSection() {
           </Reveal>
 
           <Reveal variants={fadeInRight}>
-            <div className="relative">
+            <div className="relative overflow-hidden rounded-lg">
               <button
                 onClick={() => lightbox.openAt(0)}
                 className="relative aspect-[3/4] lg:aspect-auto lg:h-[580px] w-full rounded-lg overflow-hidden cursor-zoom-in block"
