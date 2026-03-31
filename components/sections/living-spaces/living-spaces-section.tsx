@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/lib/i18n/navigation";
@@ -5,10 +7,14 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
+import { Lightbox, useLightbox } from "@/components/ui/lightbox";
 import { fadeInLeft, fadeInRight } from "@/lib/motion/variants";
+
+const livingSpacesImage = { src: "/images/pic1.webp", alt: "Spacious enclosed terrace with glass walls and pergola roof" };
 
 export function LivingSpacesSection() {
   const t = useTranslations("livingSpaces");
+  const lightbox = useLightbox();
 
   const features = [t("feature1"), t("feature2"), t("feature3")];
 
@@ -17,10 +23,14 @@ export function LivingSpacesSection() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <Reveal variants={fadeInLeft}>
-            <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[560px] rounded-lg overflow-hidden">
+            <button
+              onClick={() => lightbox.openAt(0)}
+              className="relative aspect-[4/3] lg:aspect-auto lg:h-[560px] w-full rounded-lg overflow-hidden cursor-zoom-in block"
+              aria-label={`View ${livingSpacesImage.alt}`}
+            >
               <Image
-                src="/images/pic1.webp"
-                alt="Spacious enclosed terrace with glass walls and pergola roof"
+                src={livingSpacesImage.src}
+                alt={livingSpacesImage.alt}
                 fill
                 priority
                 className="object-cover"
@@ -32,16 +42,16 @@ export function LivingSpacesSection() {
                     <div className="w-4 h-4 rounded-sm bg-brand" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-ink leading-tight">
+                    <p className="text-xs font-semibold text-ink leading-tight text-left">
                       {t("accentTitle")}
                     </p>
-                    <p className="text-xs text-ink-muted mt-0.5">
+                    <p className="text-xs text-ink-muted mt-0.5 text-left">
                       {t("accentDesc")}
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </Reveal>
 
           <Reveal variants={fadeInRight}>
@@ -72,6 +82,13 @@ export function LivingSpacesSection() {
           </Reveal>
         </div>
       </Container>
+
+      <Lightbox
+        images={[livingSpacesImage]}
+        initialIndex={lightbox.index}
+        open={lightbox.open}
+        onClose={lightbox.close}
+      />
     </section>
   );
 }

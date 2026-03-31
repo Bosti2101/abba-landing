@@ -7,13 +7,17 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
+import { Lightbox, useLightbox } from "@/components/ui/lightbox";
 import { fadeInLeft, fadeInRight, staggerContainer } from "@/lib/motion/variants";
 import { motion } from "framer-motion";
 import { BenefitCard } from "@/components/sections/winter-gardens/benefit-card";
 import { SunIcon, ThermometerIcon, ExpandIcon } from "@/components/sections/winter-gardens/winter-garden-icons";
 
+const winterGardenImage = { src: "/images/pic2.webp", alt: "Modern white house with elegant winter garden glass extension" };
+
 export function WinterGardensSection() {
   const t = useTranslations("winterGardens");
+  const lightbox = useLightbox();
 
   const benefits = [
     { title: t("benefit1Title"), desc: t("benefit1Desc"), icon: <SunIcon /> },
@@ -62,10 +66,14 @@ export function WinterGardensSection() {
           </Reveal>
 
           <Reveal variants={fadeInRight}>
-            <div className="relative aspect-[3/4] lg:aspect-auto lg:h-[600px] rounded-lg overflow-hidden">
+            <button
+              onClick={() => lightbox.openAt(0)}
+              className="relative aspect-[3/4] lg:aspect-auto lg:h-[600px] w-full rounded-lg overflow-hidden cursor-zoom-in block"
+              aria-label={`View ${winterGardenImage.alt}`}
+            >
               <Image
-                src="/images/pic2.webp"
-                alt="Modern white house with elegant winter garden glass extension"
+                src={winterGardenImage.src}
+                alt={winterGardenImage.alt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -75,10 +83,17 @@ export function WinterGardensSection() {
               <div className="absolute top-6 right-6 bg-brand text-white text-xs font-semibold px-3 py-1.5 rounded-sm tracking-wide uppercase">
                 {t("badge")}
               </div>
-            </div>
+            </button>
           </Reveal>
         </div>
       </Container>
+
+      <Lightbox
+        images={[winterGardenImage]}
+        initialIndex={lightbox.index}
+        open={lightbox.open}
+        onClose={lightbox.close}
+      />
     </section>
   );
 }

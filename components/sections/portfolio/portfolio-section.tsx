@@ -8,10 +8,12 @@ import Autoplay from "embla-carousel-autoplay";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
+import { Lightbox, useLightbox } from "@/components/ui/lightbox";
 import { portfolioCategories } from "@/content/site-data";
 
 export function PortfolioSection() {
   const t = useTranslations("portfolio");
+  const lightbox = useLightbox();
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
@@ -47,7 +49,11 @@ export function PortfolioSection() {
                 className="shrink-0 min-w-0 pl-4"
                 style={{ flex: "0 0 auto" }}
               >
-                <div className="relative w-[300px] sm:w-[360px] lg:w-[420px] aspect-[3/4] rounded-lg overflow-hidden group">
+                <button
+                  onClick={() => lightbox.openAt(i)}
+                  className="relative w-[300px] sm:w-[360px] lg:w-[420px] aspect-[3/4] rounded-lg overflow-hidden group cursor-zoom-in block"
+                  aria-label={`View ${img.alt}`}
+                >
                   <Image
                     src={img.src}
                     alt={img.alt}
@@ -59,7 +65,7 @@ export function PortfolioSection() {
                   <div className="absolute bottom-4 left-4 right-4 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
                     {img.alt}
                   </div>
-                </div>
+                </button>
               </div>
             ))}
           </div>
@@ -88,6 +94,12 @@ export function PortfolioSection() {
           </div>
         </Container>
       </div>
+      <Lightbox
+        images={allImages.map((img) => ({ src: img.src, alt: img.alt }))}
+        initialIndex={lightbox.index}
+        open={lightbox.open}
+        onClose={lightbox.close}
+      />
     </section>
   );
 }

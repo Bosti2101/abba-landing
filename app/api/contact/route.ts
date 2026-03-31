@@ -84,8 +84,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'INVALID_MESSAGE' }, { status: 400 });
   }
 
-  const lang = body.country.toLowerCase() === 'bulgaria' ? 'bulgaria' : 'romania';
-  const labels = emailLabels[lang];
+  const labels = emailLabels['romania'];
 
   try {
     const { error } = await resend.emails.send({
@@ -129,7 +128,7 @@ function buildEmailHtml(body: ContactBody, labels: Record<string, string>): stri
   const phone = escapeHtml(body.phone);
   const country = escapeHtml(body.country);
   const message = escapeHtml(body.message).replace(/\n/g, '<br />');
-  const lang = body.country.toLowerCase() === 'bulgaria' ? 'bg' : 'ro';
+  const lang = 'ro';
 
   return `
 <!DOCTYPE html>

@@ -7,11 +7,15 @@ import { useInView } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
+import { Lightbox, useLightbox } from "@/components/ui/lightbox";
 import { fadeInLeft, fadeInRight } from "@/lib/motion/variants";
 import { StatCounter } from "@/components/sections/about/stat-counter";
 
+const aboutImage = { src: "/images/pic3.webp", alt: "Enclosed terrace with glass walls and bioclimatic louvered roof" };
+
 export function AboutSection() {
   const t = useTranslations("about");
+  const lightbox = useLightbox();
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: false, margin: "-100px" });
 
@@ -38,13 +42,13 @@ export function AboutSection() {
                 description={t("description")}
               />
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-3 sm:gap-6">
                 {stats.map(({ labelKey, target, suffix }) => (
                   <div
                     key={labelKey}
-                    className="flex flex-col gap-1 p-5 bg-white rounded-lg border border-border shadow-sm"
+                    className="flex flex-col gap-1 p-3 sm:p-5 bg-white rounded-lg border border-border shadow-sm min-w-0"
                   >
-                    <span className="text-3xl font-bold text-brand tracking-tight">
+                    <span className="text-xl sm:text-3xl font-bold text-brand tracking-tight break-words">
                       <StatCounter
                         target={target}
                         suffix={suffix}
@@ -52,7 +56,7 @@ export function AboutSection() {
                       />
                       {target >= 200 && "+"}
                     </span>
-                    <span className="text-sm text-ink-muted font-medium">
+                    <span className="text-xs sm:text-sm text-ink-muted font-medium">
                       {labelKey}
                     </span>
                   </div>
@@ -62,19 +66,32 @@ export function AboutSection() {
           </Reveal>
 
           <Reveal variants={fadeInRight}>
-            <div className="relative aspect-[3/4] lg:aspect-auto lg:h-[580px] rounded-lg overflow-hidden">
-              <Image
-                src="/images/pic3.webp"
-                alt="Enclosed terrace with glass walls and bioclimatic louvered roof"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+            <div className="relative">
+              <button
+                onClick={() => lightbox.openAt(0)}
+                className="relative aspect-[3/4] lg:aspect-auto lg:h-[580px] w-full rounded-lg overflow-hidden cursor-zoom-in block"
+                aria-label={`View ${aboutImage.alt}`}
+              >
+                <Image
+                  src={aboutImage.src}
+                  alt={aboutImage.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </button>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand rounded-lg -z-10" />
             </div>
           </Reveal>
         </div>
       </Container>
+
+      <Lightbox
+        images={[aboutImage]}
+        initialIndex={lightbox.index}
+        open={lightbox.open}
+        onClose={lightbox.close}
+      />
     </section>
   );
 }

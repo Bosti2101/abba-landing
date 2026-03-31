@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
+import { Lightbox, useLightbox } from "@/components/ui/lightbox";
 import { fadeInLeft, fadeInRight, staggerContainer, fadeInUp } from "@/lib/motion/variants";
 import { motion } from "framer-motion";
 import { RulerIcon, FactoryIcon, TruckIcon } from "./strength-icons";
@@ -13,6 +14,7 @@ const icons = [<RulerIcon key="ruler" />, <FactoryIcon key="factory" />, <TruckI
 
 export function StrengthsSection() {
   const t = useTranslations("strengths");
+  const lightbox = useLightbox();
 
   const items = [
     { title: t("item1Title"), desc: t("item1Desc") },
@@ -32,7 +34,11 @@ export function StrengthsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <Reveal variants={fadeInLeft}>
             <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
-              <div className="relative aspect-[3/4] sm:aspect-square rounded-lg overflow-hidden col-span-1 row-span-2 lg:mt-16">
+              <button
+                onClick={() => lightbox.openAt(0)}
+                className="relative aspect-[3/4] sm:aspect-square rounded-lg overflow-hidden col-span-1 row-span-2 lg:mt-16 cursor-zoom-in"
+                aria-label={`View ${images[0].alt}`}
+              >
                 <Image
                   src={images[0].src}
                   alt={images[0].alt}
@@ -40,8 +46,12 @@ export function StrengthsSection() {
                   className="object-cover"
                   sizes="(max-width: 640px) 50vw, 25vw"
                 />
-              </div>
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+              </button>
+              <button
+                onClick={() => lightbox.openAt(1)}
+                className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-zoom-in"
+                aria-label={`View ${images[1].alt}`}
+              >
                 <Image
                   src={images[1].src}
                   alt={images[1].alt}
@@ -49,8 +59,12 @@ export function StrengthsSection() {
                   className="object-cover"
                   sizes="(max-width: 640px) 50vw, 25vw"
                 />
-              </div>
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-surface-mid">
+              </button>
+              <button
+                onClick={() => lightbox.openAt(2)}
+                className="relative aspect-[4/3] rounded-lg overflow-hidden bg-surface-mid cursor-zoom-in"
+                aria-label={`View ${images[2].alt}`}
+              >
                 <Image
                   src={images[2].src}
                   alt={images[2].alt}
@@ -58,8 +72,15 @@ export function StrengthsSection() {
                   className="object-cover"
                   sizes="(max-width: 640px) 50vw, 25vw"
                 />
-              </div>
+              </button>
             </div>
+
+            <Lightbox
+              images={images}
+              initialIndex={lightbox.index}
+              open={lightbox.open}
+              onClose={lightbox.close}
+            />
           </Reveal>
 
           <div className="flex flex-col gap-10">
