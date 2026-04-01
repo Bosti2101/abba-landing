@@ -169,6 +169,20 @@
     "errorRetry": "Try Again"
   },
   "projects": {
+    "sistem-ghilotina": {
+      "label": "Guillotine System",
+      "title": "Enjoy the uninterrupted view and manage the seasons as you wish",
+      "desc": "We transform outdoor spaces into relaxation zones with our guillotine glass systems. Thanks to glass panels that move vertically, you get both an elegant railing for balconies and terraces, and the comfort of a fully enclosed winter garden.",
+      "whyTitle": "Why choose the guillotine glass system?",
+      "f1Title": "Full control",
+      "f1Desc": "Regulate airflow by stopping the panels at any level via remote control.",
+      "f2Title": "Thermal and acoustic insulation",
+      "f2Desc": "Protect yourself from cold and noise with double-glazed options.",
+      "f3Title": "Safe design",
+      "f3Desc": "Provides a safe barrier for children and pets.",
+      "f4Title": "Panoramic view",
+      "f4Desc": "Make no compromises with a modern and minimalist design."
+    },
     "gradina-de-iarna": {
       "label": "Winter Garden",
       "title": "The calm of the garden, inside your home",
@@ -222,7 +236,7 @@
     "item2Desc": "Custom glass and aluminium extensions that transform your terrace into a year-round living space.",
     "item3Title": "Bioclimatic System",
     "item3Desc": "Rotating louvres that control light and ventilation, creating the perfect microclimate.",
-    "item4Title": "Guillotine Window",
+    "item4Title": "Guillotine System",
     "item4Desc": "Automatic glass closure systems for maximum protection and comfort.",
     "learnMore": "Learn more"
   },

@@ -41,20 +41,13 @@ export const portfolioCategories: PortfolioCategory[] = [
     })),
   },
   {
-    id: "guillotine-window",
+    id: "sistem-ghilotina",
     label: "category4",
-    images: [
-      {
-        src: "/images/pic7.webp",
-        alt: "Automatic guillotine window system",
-        category: "guillotine-window",
-      },
-      {
-        src: "/images/pic8.webp",
-        alt: "Glass guillotine enclosure",
-        category: "guillotine-window",
-      },
-    ],
+    images: Array.from({ length: 9 }, (_, i) => ({
+      src: `/projects/SISTEM GHILOTINA/sistem-ghilotina-${i + 1}.webp`,
+      alt: "ABA Pergola Systems",
+      category: "sistem-ghilotina",
+    })),
   },
 ];
 
@@ -100,10 +93,10 @@ export const serviceItems: ServiceItem[] = [
     href: "/projects/sistem-bioclimatic",
   },
   {
-    id: "guillotine-window",
+    id: "sistem-ghilotina",
     title: "item4Title",
     description: "item4Desc",
-    image: "/images/pic9.webp",
-    href: "/projects/guillotine-window",
+    image: "/projects/SISTEM GHILOTINA/sistem-ghilotina-1.webp",
+    href: "/projects/sistem-ghilotina",
   },
 ];

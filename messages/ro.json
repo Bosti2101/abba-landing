@@ -169,6 +169,20 @@
     "errorRetry": "Încearcă din nou"
   },
   "projects": {
+    "sistem-ghilotina": {
+      "label": "Sistem Ghilotină",
+      "title": "Savurați priveliștea neîntreruptă și gestionați anotimpurile așa cum doriți",
+      "desc": "Transformăm spațiile exterioare în zone de relaxare cu sistemele noastre de geam ghilotină. Datorită panourilor de sticlă care se deplasează pe verticală, obțineți atât o balustradă elegantă pentru balcoane și terase, cât și confortul unei grădini de iarnă complet închise.",
+      "whyTitle": "De ce să alegeți sistemul de geam ghilotină?",
+      "f1Title": "Control deplin",
+      "f1Desc": "Reglați fluxul de aer oprind panourile la orice nivel prin telecomandă.",
+      "f2Title": "Izolație termică și fonică",
+      "f2Desc": "Protejați-vă de frig și zgomot cu opțiunile de geam termopan.",
+      "f3Title": "Design sigur",
+      "f3Desc": "Oferă o barieră sigură pentru copii și animale de companie.",
+      "f4Title": "Vedere panoramică",
+      "f4Desc": "Nu faceți compromisuri cu un design modern și minimalist."
+    },
     "gradina-de-iarna": {
       "label": "Grădină de Iarnă",
       "title": "Liniștea grădinii, în interiorul casei tale",
@@ -222,7 +236,7 @@
     "item2Desc": "Extensii personalizate din sticlă și aluminiu care vă transformă terasa într-un spațiu de locuit pe tot parcursul anului.",
     "item3Title": "Sistem Bioclimatic",
     "item3Desc": "Lamele orientabile care controlează lumina și ventilația, creând microclimatul perfect.",
-    "item4Title": "Fereastră Ghilotină",
+    "item4Title": "Sistem Ghilotină",
     "item4Desc": "Sisteme automate de închidere cu sticlă pentru protecție și confort maxim.",
     "learnMore": "Află mai mult"
   },
