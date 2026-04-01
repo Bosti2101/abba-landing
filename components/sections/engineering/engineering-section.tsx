@@ -17,12 +17,12 @@ import { CheckIcon } from './check-icon';
 
 const engineeringImages = [
   {
-    src: '/images/pic7.webp',
-    alt: 'Modern pergola over outdoor pool with elegant dark structure',
+    src: '/projects/PERGOLA RETRACTABILA/pergola-retractabila-8.webp',
+    alt: 'ABA Pergola Systems',
   },
   {
-    src: '/images/pic8.webp',
-    alt: 'White pergola attached to building with staircase',
+    src: '/projects/SISTEM GLISANT/sistem-glisant-2.webp',
+    alt: 'ABA Pergola Systems',
   },
 ];
 

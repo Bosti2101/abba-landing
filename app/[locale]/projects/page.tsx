@@ -21,13 +21,13 @@ export async function generateMetadata({ params }: ProjectsPageProps): Promise<M
     openGraph: {
       title: t("projectsTitle"),
       description: t("projectsDesc"),
-      images: [{ url: "/images/og-image.webp", width: 1200, height: 630 }],
+      images: [{ url: "/logo.png", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: t("projectsTitle"),
       description: t("projectsDesc"),
-      images: ["/images/og-image.webp"],
+      images: ["/logo.png"],
     },
   };
 }

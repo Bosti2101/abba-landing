@@ -10,7 +10,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { Lightbox, useLightbox } from "@/components/ui/lightbox";
 import { fadeInLeft, fadeInRight } from "@/lib/motion/variants";
 
-const livingSpacesImage = { src: "/images/pic1.webp", alt: "Spacious enclosed terrace with glass walls and pergola roof" };
+const livingSpacesImage = { src: "/projects/PERGOLA RETRACTABILA/pergola-retractabila-3.webp", alt: "ABA Pergola Systems" };
 
 export function LivingSpacesSection() {
   const t = useTranslations("livingSpaces");

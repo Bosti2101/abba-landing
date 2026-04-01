@@ -23,9 +23,9 @@ export function StrengthsSection() {
   ];
 
   const images = [
-    { src: "/images/pic4.webp", alt: "Pergola installed over stone terrace" },
-    { src: "/images/pic5.webp", alt: "Close-up of retractable louvered roof detail" },
-    { src: "/images/pic6.webp", alt: "Technical aluminum profile engineering render" },
+    { src: "/projects/SISTEM GHILOTINA/sistem-ghilotina-1.webp", alt: "ABA Pergola Systems" },
+    { src: "/projects/PERGOLA RETRACTABILA/pergola-retractabila-5.webp", alt: "ABA Pergola Systems" },
+    { src: "/projects/SISTEM BIOCLIMATIC/bioclimatic-3.webp", alt: "ABA Pergola Systems" },
   ];
 
   return (
