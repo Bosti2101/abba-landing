@@ -1,0 +1,23 @@
+{
+  "name": "ABA Pergola Systems",
+  "short_name": "ABA Pergola",
+  "description": "Pergole bioclimatice, grădini de iarnă și sisteme de sticlă premium în România și Bulgaria.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/aba-logo-square.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/aba-logo-square.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

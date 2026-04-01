@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
   const t = await getTranslations({ locale, namespace: "pages" });
 
   return {
-    title: t("homeTitle"),
+    title: { absolute: t("homeTitle") },
     description: t("homeDesc"),
     openGraph: {
       title: t("homeTitle"),

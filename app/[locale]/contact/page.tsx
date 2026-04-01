@@ -29,6 +29,10 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
       description: t('contactDesc'),
       images: ['/logo.png'],
     },
+    alternates: {
+      canonical: `/${locale}/contact`,
+      languages: { ro: '/ro/contact', en: '/en/contact', bg: '/bg/contact' },
+    },
   };
 }
 

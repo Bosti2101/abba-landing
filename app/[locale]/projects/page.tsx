@@ -29,6 +29,10 @@ export async function generateMetadata({ params }: ProjectsPageProps): Promise<M
       description: t("projectsDesc"),
       images: ["/logo.png"],
     },
+    alternates: {
+      canonical: `/${locale}/projects`,
+      languages: { ro: "/ro/projects", en: "/en/projects", bg: "/bg/projects" },
+    },
   };
 }
 
