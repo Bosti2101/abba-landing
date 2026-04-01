@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import { BenefitCard } from "@/components/sections/winter-gardens/benefit-card";
 import { SunIcon, ThermometerIcon, ExpandIcon } from "@/components/sections/winter-gardens/winter-garden-icons";
 
-const winterGardenImage = { src: "/projects/GRADINA DE IARNA/gradina-de-iarna-1.webp", alt: "ABA Pergola Systems" };
+const winterGardenImage = { src: "/projects/GRADINA DE IARNA/gradina-de-iarna-1.webp", alt: "Grădină de Iarnă — ABA Pergola Systems" };
 
 export function WinterGardensSection() {
   const t = useTranslations("winterGardens");

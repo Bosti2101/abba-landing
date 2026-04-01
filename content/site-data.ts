@@ -18,7 +18,7 @@ export const portfolioCategories: PortfolioCategory[] = [
     label: "category1",
     images: Array.from({ length: 22 }, (_, i) => ({
       src: `/projects/PERGOLA RETRACTABILA/pergola-retractabila-${i + 1}.webp`,
-      alt: "ABA Pergola Systems",
+      alt: "Pergolă Retractabilă — ABA Pergola Systems",
       category: "pergola-retractabila",
     })),
   },
@@ -27,7 +27,7 @@ export const portfolioCategories: PortfolioCategory[] = [
     label: "category2",
     images: Array.from({ length: 9 }, (_, i) => ({
       src: `/projects/GRADINA DE IARNA/gradina-de-iarna-${i + 1}.webp`,
-      alt: "ABA Pergola Systems",
+      alt: "Grădină de Iarnă — ABA Pergola Systems",
       category: "gradina-de-iarna",
     })),
   },
@@ -36,7 +36,7 @@ export const portfolioCategories: PortfolioCategory[] = [
     label: "category3",
     images: Array.from({ length: 12 }, (_, i) => ({
       src: `/projects/SISTEM BIOCLIMATIC/bioclimatic-${i + 1}.webp`,
-      alt: "ABA Pergola Systems",
+      alt: "Sistem Bioclimatic — ABA Pergola Systems",
       category: "sistem-bioclimatic",
     })),
   },
@@ -45,7 +45,7 @@ export const portfolioCategories: PortfolioCategory[] = [
     label: "category4",
     images: Array.from({ length: 9 }, (_, i) => ({
       src: `/projects/SISTEM GHILOTINA/sistem-ghilotina-${i + 1}.webp`,
-      alt: "ABA Pergola Systems",
+      alt: "Sistem Ghilotină — ABA Pergola Systems",
       category: "sistem-ghilotina",
     })),
   },
@@ -54,7 +54,7 @@ export const portfolioCategories: PortfolioCategory[] = [
     label: "category5",
     images: Array.from({ length: 3 }, (_, i) => ({
       src: `/projects/SISTEM GLISANT/sistem-glisant-${i + 1}.webp`,
-      alt: "ABA Pergola Systems",
+      alt: "Sistem Glisant — ABA Pergola Systems",
       category: "sistem-glisant",
     })),
   },

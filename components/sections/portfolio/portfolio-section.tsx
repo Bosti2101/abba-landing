@@ -26,7 +26,10 @@ export function PortfolioSection() {
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  const allImages = portfolioCategories.flatMap((cat) => cat.images);
+  const maxLen = Math.max(...portfolioCategories.map((c) => c.images.length));
+  const allImages = Array.from({ length: maxLen }, (_, i) =>
+    portfolioCategories.flatMap((cat) => cat.images[i] ? [cat.images[i]] : [])
+  ).flat();
 
   return (
     <section className="section-y-sm bg-white overflow-hidden" aria-label="Portfolio">

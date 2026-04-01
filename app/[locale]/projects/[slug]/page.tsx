@@ -51,15 +51,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   setRequestLocale(locale as Locale);
   const t = await getTranslations({ locale, namespace: 'services' });
-  const tProject = await getTranslations({ locale, namespace: `projects.${slug}` as never });
-
   const title = t(
     item.title as 'item1Title' | 'item2Title' | 'item3Title' | 'item4Title',
   );
   const description = t(
     item.description as 'item1Desc' | 'item2Desc' | 'item3Desc' | 'item4Desc',
   );
-  const label = tProject('label');
 
   const category = portfolioCategories.find((cat) => cat.id === slug);
   const images = category?.images ?? [];
@@ -76,7 +73,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <PageHero label={label} title={title} description={description} />
+      <PageHero label="ABA Pergola Systems" title={title} description={description} />
 
       {slug === 'sistem-bioclimatic' && <BioclimaticContent />}
       {slug === 'pergola-retractabila' && <PergolaRetractabilaContent />}

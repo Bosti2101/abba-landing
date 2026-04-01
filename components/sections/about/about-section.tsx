@@ -11,7 +11,7 @@ import { Lightbox, useLightbox } from "@/components/ui/lightbox";
 import { fadeInLeft, fadeInRight } from "@/lib/motion/variants";
 import { StatCounter } from "@/components/sections/about/stat-counter";
 
-const aboutImage = { src: "/projects/SISTEM BIOCLIMATIC/bioclimatic-1.webp", alt: "ABA Pergola Systems" };
+const aboutImage = { src: "/projects/SISTEM BIOCLIMATIC/bioclimatic-1.webp", alt: "Sistem Bioclimatic — ABA Pergola Systems" };
 
 export function AboutSection() {
   const t = useTranslations("about");

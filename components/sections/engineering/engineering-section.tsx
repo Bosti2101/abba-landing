@@ -18,11 +18,11 @@ import { CheckIcon } from './check-icon';
 const engineeringImages = [
   {
     src: '/projects/PERGOLA RETRACTABILA/pergola-retractabila-8.webp',
-    alt: 'ABA Pergola Systems',
+    alt: 'Pergolă Retractabilă — ABA Pergola Systems',
   },
   {
     src: '/projects/SISTEM GLISANT/sistem-glisant-2.webp',
-    alt: 'ABA Pergola Systems',
+    alt: 'Sistem Glisant — ABA Pergola Systems',
   },
 ];
 

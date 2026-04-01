@@ -23,9 +23,9 @@ export function StrengthsSection() {
   ];
 
   const images = [
-    { src: "/projects/SISTEM GHILOTINA/sistem-ghilotina-1.webp", alt: "ABA Pergola Systems" },
-    { src: "/projects/PERGOLA RETRACTABILA/pergola-retractabila-5.webp", alt: "ABA Pergola Systems" },
-    { src: "/projects/SISTEM BIOCLIMATIC/bioclimatic-3.webp", alt: "ABA Pergola Systems" },
+    { src: "/projects/SISTEM GHILOTINA/sistem-ghilotina-1.webp", alt: "Sistem Ghilotină — ABA Pergola Systems" },
+    { src: "/projects/PERGOLA RETRACTABILA/pergola-retractabila-5.webp", alt: "Pergolă Retractabilă — ABA Pergola Systems" },
+    { src: "/projects/SISTEM BIOCLIMATIC/bioclimatic-3.webp", alt: "Sistem Bioclimatic — ABA Pergola Systems" },
   ];
 
   return (
