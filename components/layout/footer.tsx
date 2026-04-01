@@ -8,7 +8,7 @@ import { Container } from "@/components/ui/container";
 export function Footer() {
   const t = useTranslations("footer");
   const locale = useLocale();
-  const whatsappNumber = locale === "bg" ? "359895393900" : "40757032748";
+  const whatsappNumber = locale === "bg" ? "359895393900" : "40757032749";
 
   return (
     <footer className="bg-surface-dark text-white">

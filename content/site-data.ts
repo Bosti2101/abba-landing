@@ -72,7 +72,7 @@ export const contactBranches: ContactBranch[] = [
   {
     name: "romaniaBranch",
     email: "info@abapergola.ro",
-    phone: "+40 757 032 748",
+    phone: "+40 757 032 749",
     address: "romaniaAddress",
     mapEmbedUrl:
       "https://maps.google.com/maps?q=Comuna+Slatioara%2C+Strada+Unirii+7%2C+Judet+Olt%2C+Romania&output=embed&z=13",

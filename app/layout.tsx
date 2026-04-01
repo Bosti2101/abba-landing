@@ -67,7 +67,7 @@ const jsonLd = {
   url: "https://abapergola.ro",
   logo: "https://abapergola.ro/aba-logo-square.png",
   image: "https://abapergola.ro/logo.png",
-  telephone: "+40 757 032 748",
+  telephone: "+40 757 032 749",
   address: {
     "@type": "PostalAddress",
     addressCountry: "RO",
