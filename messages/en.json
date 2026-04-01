@@ -169,6 +169,20 @@
     "errorRetry": "Try Again"
   },
   "projects": {
+    "gradina-de-iarna": {
+      "label": "Winter Garden",
+      "title": "The calm of the garden, inside your home",
+      "desc": "With our winter garden systems, we bring the tranquility of your garden indoors, even on the coldest days. In these special spaces where aesthetic design meets high insulation technology, enjoy your coffee while watching the snow fall. We create an elegant refuge that adds value to your home and breathes in every season. Remove the barriers between you and nature.",
+      "whyTitle": "Key advantages",
+      "f1Title": "Superior thermal insulation",
+      "f1Desc": "A warm environment in winter and cool in summer thanks to double-glazed systems.",
+      "f2Title": "Durable roof solutions",
+      "f2Desc": "Water and snow resistant structures, with options for transparent, tinted glass or panels.",
+      "f3Title": "Perfect integration",
+      "f3Desc": "Unified appearance, compatible with our sliding and guillotine glass systems.",
+      "f4Title": "Custom design",
+      "f4Desc": "Color and profile options adapted to your home's architecture."
+    },
     "pergola-retractabila": {
       "label": "Retractable Pergola",
       "title": "Refinement and Comfort Without Compromise",
@@ -204,7 +218,7 @@
     "description": "From retractable pergolas to full winter gardens, we offer premium solutions tailored to your needs.",
     "item1Title": "Retractable Pergola",
     "item1Desc": "Elegant, retractable covering systems for residential and commercial terraces.",
-    "item2Title": "Winter Gardens",
+    "item2Title": "Winter Garden",
     "item2Desc": "Custom glass and aluminium extensions that transform your terrace into a year-round living space.",
     "item3Title": "Bioclimatic System",
     "item3Desc": "Rotating louvres that control light and ventilation, creating the perfect microclimate.",

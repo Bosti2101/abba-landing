@@ -169,6 +169,20 @@
     "errorRetry": "Încearcă din nou"
   },
   "projects": {
+    "gradina-de-iarna": {
+      "label": "Grădină de Iarnă",
+      "title": "Liniștea grădinii, în interiorul casei tale",
+      "desc": "Cu sistemele noastre de grădini de iarnă, aducem liniștea grădinii tale în interiorul casei, chiar și în cele mai reci zile. În aceste spații speciale unde designul estetic întâlnește tehnologia înaltă de izolare, bucură-te de cafeaua ta în timp ce privești ninsoarea. Creăm un refugiu elegant care adaugă valoare casei tale și respiră în orice anotimp. Eliminați barierele dintre tine și natură.",
+      "whyTitle": "Avantaje principale",
+      "f1Title": "Izolație termică superioară",
+      "f1Desc": "Un mediu cald iarna și răcoros vara datorită sistemelor cu geam termopan.",
+      "f2Title": "Soluții durabile pentru acoperiș",
+      "f2Desc": "Structuri rezistente la apă și la zăpadă, cu opțiuni de sticlă transparentă, colorată sau panouri.",
+      "f3Title": "Integrare perfectă",
+      "f3Desc": "Aspect unitar, compatibil cu sistemele noastre de glisante și geam ghilotină.",
+      "f4Title": "Design personalizat",
+      "f4Desc": "Opțiuni de culori și profile adaptate arhitecturii casei tale."
+    },
     "pergola-retractabila": {
       "label": "Pergolă Retractabilă",
       "title": "Rafinament și Confort Fără Compromisuri",
@@ -204,7 +218,7 @@
     "description": "De la pergole retractabile la grădini de iarnă complete, oferim soluții premium adaptate nevoilor dumneavoastră.",
     "item1Title": "Pergolă Retractabilă",
     "item1Desc": "Sisteme de acoperire retractabile elegante, perfecte pentru terase rezidențiale și comerciale.",
-    "item2Title": "Grădini de Iarnă",
+    "item2Title": "Grădină de Iarnă",
     "item2Desc": "Extensii personalizate din sticlă și aluminiu care vă transformă terasa într-un spațiu de locuit pe tot parcursul anului.",
     "item3Title": "Sistem Bioclimatic",
     "item3Desc": "Lamele orientabile care controlează lumina și ventilația, creând microclimatul perfect.",

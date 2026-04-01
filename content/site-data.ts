@@ -23,20 +23,13 @@ export const portfolioCategories: PortfolioCategory[] = [
     })),
   },
   {
-    id: "winter-garden",
+    id: "gradina-de-iarna",
     label: "category2",
-    images: [
-      {
-        src: "/images/pic3.webp",
-        alt: "Elegant winter garden extension",
-        category: "winter-garden",
-      },
-      {
-        src: "/images/pic4.webp",
-        alt: "Modern winter garden with glass walls",
-        category: "winter-garden",
-      },
-    ],
+    images: Array.from({ length: 9 }, (_, i) => ({
+      src: `/projects/GRADINA DE IARNA/gradina-de-iarna-${i + 1}.webp`,
+      alt: "ABA Pergola Systems",
+      category: "gradina-de-iarna",
+    })),
   },
   {
     id: "sistem-bioclimatic",
@@ -93,11 +86,11 @@ export const serviceItems: ServiceItem[] = [
     href: "/projects/pergola-retractabila",
   },
   {
-    id: "winter-garden",
+    id: "gradina-de-iarna",
     title: "item2Title",
     description: "item2Desc",
-    image: "/images/pic3.webp",
-    href: "/projects/winter-garden",
+    image: "/projects/GRADINA DE IARNA/gradina-de-iarna-1.webp",
+    href: "/projects/gradina-de-iarna",
   },
   {
     id: "sistem-bioclimatic",
