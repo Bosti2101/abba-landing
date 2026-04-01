@@ -168,6 +168,22 @@
     "errorDesc": "A apărut o eroare neașteptată. Vă rugăm să încercați din nou sau să reveniți la pagina principală.",
     "errorRetry": "Încearcă din nou"
   },
+  "projects": {
+    "sistem-bioclimatic": {
+      "label": "Bioclimatic",
+      "title": "Lamele inteligente, confort impecabil",
+      "desc": "Sistemele de pergole bioclimatice adaptează spațiul tău exterior la orice condiții meteorologice, datorită panourilor de aluminiu mobile cu rotație axială. Poți deschide ușor lamelele pentru a asigura o ventilație naturală sau le poți închide complet pentru a crea un spațiu protejat și etanș. Cea mai avansată soluție pentru exterior, unde tehnologia modernă întâlnește confortul.",
+      "whyTitle": "De ce să alegi o pergolă bioclimatică?",
+      "f1Title": "Climatizare naturală",
+      "f1Desc": "Reglează unghiul lamelelor pentru a direcționa lumina soarelui și pentru a evacua aerul cald.",
+      "f2Title": "Rezistență în patru anotimpuri",
+      "f2Desc": "Structură din aluminiu de înaltă rezistență împotriva zăpezii abundente și a vântului puternic.",
+      "f3Title": "Iluminare LED integrată",
+      "f3Desc": "Opțiuni de iluminat încorporat pentru a crea o atmosferă elegantă seara.",
+      "f4Title": "Automatizare completă",
+      "f4Desc": "Gestionează întregul sistem printr-o simplă telecomandă sau aplicație pe smartphone."
+    }
+  },
   "services": {
     "label": "Serviciile Noastre",
     "title": "Soluții Complete pentru Spații Exterioare",
@@ -176,7 +192,7 @@
     "item1Desc": "Sisteme de acoperire retractabile elegante, perfecte pentru terase rezidențiale și comerciale.",
     "item2Title": "Grădini de Iarnă",
     "item2Desc": "Extensii personalizate din sticlă și aluminiu care vă transformă terasa într-un spațiu de locuit pe tot parcursul anului.",
-    "item3Title": "Acoperiș Bioclimatic",
+    "item3Title": "Sistem Bioclimatic",
     "item3Desc": "Lamele orientabile care controlează lumina și ventilația, creând microclimatul perfect.",
     "item4Title": "Fereastră Ghilotină",
     "item4Desc": "Sisteme automate de închidere cu sticlă pentru protecție și confort maxim.",

@@ -2,11 +2,11 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { locales, type Locale } from '@/lib/i18n/routing';
-import { serviceItems } from '@/content/site-data';
-import { portfolioCategories } from '@/content/site-data';
+import { serviceItems, portfolioCategories } from '@/content/site-data';
 import { PageHero } from '@/components/sections/page-hero/page-hero';
 import { Container } from '@/components/ui/container';
 import { ProjectGallery } from './project-gallery';
+import { BioclimaticContent } from './bioclimatic-content';
 
 interface ProjectPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -26,12 +26,8 @@ export async function generateMetadata({
   if (!item) return {};
 
   const t = await getTranslations({ locale, namespace: 'services' });
-  const title = t(
-    item.title as 'item1Title' | 'item2Title' | 'item3Title' | 'item4Title',
-  );
-  const description = t(
-    item.description as 'item1Desc' | 'item2Desc' | 'item3Desc' | 'item4Desc',
-  );
+  const title = t(item.title as 'item1Title' | 'item2Title' | 'item3Title' | 'item4Title');
+  const description = t(item.description as 'item1Desc' | 'item2Desc' | 'item3Desc' | 'item4Desc');
 
   return {
     title: `${title} — ABA Pergola Systems`,
@@ -48,26 +44,34 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   setRequestLocale(locale as Locale);
   const t = await getTranslations({ locale, namespace: 'services' });
 
-  const title = t(
-    item.title as 'item1Title' | 'item2Title' | 'item3Title' | 'item4Title',
-  );
-  const description = t(
-    item.description as 'item1Desc' | 'item2Desc' | 'item3Desc' | 'item4Desc',
-  );
+  const title = t(item.title as 'item1Title' | 'item2Title' | 'item3Title' | 'item4Title');
+  const description = t(item.description as 'item1Desc' | 'item2Desc' | 'item3Desc' | 'item4Desc');
 
   const category = portfolioCategories.find((cat) => cat.id === slug);
   const images = category?.images ?? [];
+
+  const isBioclimatic = slug === 'sistem-bioclimatic';
 
   return (
     <>
       <PageHero label={t('label')} title={title} description={description} />
 
+      {isBioclimatic && <BioclimaticContent />}
+
       <section className='section-y-sm bg-white'>
         <Container>
-          <ProjectGallery
-            mainImage={{ src: item.image, alt: title }}
-            sideImages={images.slice(0, 2).map((img) => ({ src: img.src, alt: img.alt }))}
-          />
+          {isBioclimatic ? (
+            <ProjectGallery
+              images={images.map((img) => ({ src: img.src, alt: img.alt }))}
+            />
+          ) : (
+            <ProjectGallery
+              images={[
+                { src: item.image, alt: title },
+                ...images.slice(0, 2).map((img) => ({ src: img.src, alt: img.alt })),
+              ]}
+            />
+          )}
         </Container>
       </section>
     </>

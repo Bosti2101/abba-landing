@@ -46,20 +46,13 @@ export const portfolioCategories: PortfolioCategory[] = [
     ],
   },
   {
-    id: "bioclimatic-roof",
+    id: "sistem-bioclimatic",
     label: "category3",
-    images: [
-      {
-        src: "/images/pic5.webp",
-        alt: "Bioclimatic rolling roof system",
-        category: "bioclimatic-roof",
-      },
-      {
-        src: "/images/pic6.webp",
-        alt: "Louvered bioclimatic pergola",
-        category: "bioclimatic-roof",
-      },
-    ],
+    images: Array.from({ length: 12 }, (_, i) => ({
+      src: `/projects/SISTEM BIOCLIMATIC/bioclimatic-${i + 1}.webp`,
+      alt: "ABA Pergola Systems",
+      category: "sistem-bioclimatic",
+    })),
   },
   {
     id: "guillotine-window",
@@ -114,11 +107,11 @@ export const serviceItems: ServiceItem[] = [
     href: "/projects/winter-garden",
   },
   {
-    id: "bioclimatic-roof",
+    id: "sistem-bioclimatic",
     title: "item3Title",
     description: "item3Desc",
     image: "/images/pic5.webp",
-    href: "/projects/bioclimatic-roof",
+    href: "/projects/sistem-bioclimatic",
   },
   {
     id: "guillotine-window",

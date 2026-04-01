@@ -168,6 +168,22 @@
     "errorDesc": "An unexpected error occurred. Please try again or go back to the homepage.",
     "errorRetry": "Try Again"
   },
+  "projects": {
+    "sistem-bioclimatic": {
+      "label": "Bioclimatic",
+      "title": "Intelligent louvres, impeccable comfort",
+      "desc": "Bioclimatic pergola systems adapt your outdoor space to any weather conditions, thanks to axially rotating mobile aluminium panels. You can easily open the louvres to ensure natural ventilation or close them completely to create a protected, sealed space. The most advanced outdoor solution, where modern technology meets comfort.",
+      "whyTitle": "Why choose a bioclimatic pergola?",
+      "f1Title": "Natural climate control",
+      "f1Desc": "Adjust the angle of the louvres to direct sunlight and evacuate hot air.",
+      "f2Title": "Four-season resistance",
+      "f2Desc": "High-strength aluminium structure resistant to heavy snow and strong winds.",
+      "f3Title": "Integrated LED lighting",
+      "f3Desc": "Built-in lighting options to create an elegant atmosphere in the evening.",
+      "f4Title": "Full automation",
+      "f4Desc": "Manage the entire system with a simple remote control or smartphone app."
+    }
+  },
   "services": {
     "label": "Our Services",
     "title": "Comprehensive Solutions for Outdoor Spaces",
@@ -176,7 +192,7 @@
     "item1Desc": "Elegant, retractable covering systems for residential and commercial terraces.",
     "item2Title": "Winter Gardens",
     "item2Desc": "Custom glass and aluminium extensions that transform your terrace into a year-round living space.",
-    "item3Title": "Bioclimatic Roof",
+    "item3Title": "Bioclimatic System",
     "item3Desc": "Rotating louvres that control light and ventilation, creating the perfect microclimate.",
     "item4Title": "Guillotine Window",
     "item4Desc": "Automatic glass closure systems for maximum protection and comfort.",
