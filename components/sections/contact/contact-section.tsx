@@ -8,7 +8,7 @@ import { contactBranches } from '@/content/site-data';
 import { BranchCard } from './branch-card';
 import { ContactForm } from './contact-form';
 
-export function ContactSection() {
+export function ContactSection({ showHeading = true }: { showHeading?: boolean }) {
   const t = useTranslations('contact');
   const tNav = useTranslations('nav');
 
@@ -31,15 +31,17 @@ export function ContactSection() {
     <section id='contact' className='section-y-sm bg-white' aria-label='Contact'>
       <Container>
         <div className='flex flex-col gap-16'>
-          <Reveal>
-            <SectionHeading
-              label={t('label')}
-              title={t('title')}
-              description={t('description')}
-              align='center'
-              className='max-w-2xl mx-auto'
-            />
-          </Reveal>
+          {showHeading && (
+            <Reveal>
+              <SectionHeading
+                label={t('label')}
+                title={t('title')}
+                description={t('description')}
+                align='center'
+                className='max-w-2xl mx-auto'
+              />
+            </Reveal>
+          )}
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             <Reveal>

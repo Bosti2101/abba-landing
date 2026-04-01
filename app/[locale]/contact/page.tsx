@@ -44,7 +44,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
         title={t('title')}
         description={t('description')}
       />
-      <ContactSection />
+      <ContactSection showHeading={false} />
     </>
   );
 }
