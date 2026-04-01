@@ -77,9 +77,9 @@
     "point4": "Finisaje eloxate de lungă durată"
   },
   "portfolio": {
-    "label": "Portofoliu",
-    "title": "Proiectele Noastre",
-    "description": "Descoperiti diversitatea și calitatea lucrărilor noastre.",
+    "label": "Serviciile Noastre",
+    "title": "Soluții Complete pentru Spații Exterioare",
+    "description": "De la pergole retractabile la grădini de iarnă complete, oferim soluții premium adaptate nevoilor dumneavoastră.",
     "category1": "Acoperiș Retractabil",
     "category2": "Grădină de Iarnă",
     "category3": "Acoperiș Bioclimatic Rulant",
@@ -242,9 +242,9 @@
     }
   },
   "services": {
-    "label": "Serviciile Noastre",
-    "title": "Soluții Complete pentru Spații Exterioare",
-    "description": "De la pergole retractabile la grădini de iarnă complete, oferim soluții premium adaptate nevoilor dumneavoastră.",
+    "label": "Portofoliu",
+    "title": "Proiectele Noastre",
+    "description": "Descoperiți diversitatea și calitatea lucrărilor noastre.",
     "item1Title": "Pergolă Retractabilă",
     "item1Desc": "Sisteme de acoperire retractabile elegante, perfecte pentru terase rezidențiale și comerciale.",
     "item2Title": "Grădină de Iarnă",

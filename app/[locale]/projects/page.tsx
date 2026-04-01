@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: ProjectsPageProps): Promise<M
 export default async function ProjectsPage({ params }: ProjectsPageProps) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
-  const t = await getTranslations({ locale, namespace: "portfolio" });
+  const t = await getTranslations({ locale, namespace: "services" });
 
   return (
     <>
@@ -45,7 +45,7 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
         description={t("description")}
       />
 
-      <ServicesSection />
+      <ServicesSection showHeading={false} />
     </>
   );
 }

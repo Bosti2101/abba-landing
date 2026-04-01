@@ -130,6 +130,21 @@ h1, h2, h3, h4, h5, h6 {
   /* Keep short transitions for hover/focus — they're functional, not decorative */
 }
 
+/* ─── Services carousel slide widths ────────────────── */
+.services-slide {
+  flex: 0 0 78%;
+}
+@media (min-width: 640px) {
+  .services-slide {
+    flex: 0 0 46%;
+  }
+}
+@media (min-width: 1024px) {
+  .services-slide {
+    flex: 0 0 24%;
+  }
+}
+
 /* ─── Mobile tap highlight ───────────────────────────── */
 * {
   -webkit-tap-highlight-color: transparent;

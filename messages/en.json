@@ -77,9 +77,9 @@
     "point4": "Long-lasting anodized coatings"
   },
   "portfolio": {
-    "label": "Portfolio",
-    "title": "Our Projects",
-    "description": "Discover the diversity and quality of our work.",
+    "label": "Our Services",
+    "title": "Comprehensive Solutions for Outdoor Spaces",
+    "description": "From retractable pergolas to full winter gardens, we offer premium solutions tailored to your needs.",
     "category1": "Retractable Roof",
     "category2": "Winter Garden",
     "category3": "Bioclimatic Rolling Roof",
@@ -242,9 +242,9 @@
     }
   },
   "services": {
-    "label": "Our Services",
-    "title": "Comprehensive Solutions for Outdoor Spaces",
-    "description": "From retractable pergolas to full winter gardens, we offer premium solutions tailored to your needs.",
+    "label": "Portfolio",
+    "title": "Our Projects",
+    "description": "Discover the diversity and quality of our work.",
     "item1Title": "Retractable Pergola",
     "item1Desc": "Elegant, retractable covering systems for residential and commercial terraces.",
     "item2Title": "Winter Garden",

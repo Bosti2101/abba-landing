@@ -98,7 +98,7 @@ export const serviceItems: ServiceItem[] = [
     id: "sistem-bioclimatic",
     title: "item3Title",
     description: "item3Desc",
-    image: "/images/pic5.webp",
+    image: "/projects/SISTEM BIOCLIMATIC/bioclimatic-1.webp",
     href: "/projects/sistem-bioclimatic",
   },
   {
