@@ -84,6 +84,7 @@
     "category2": "Winter Garden",
     "category3": "Bioclimatic Rolling Roof",
     "category4": "Automatic Guillotine Window",
+    "category5": "Sliding Glass System",
     "viewAll": "View All Projects",
     "filterAll": "All"
   },
@@ -211,6 +212,20 @@
       "f4Title": "Premium PVC Membrane",
       "f4Desc": "Made from multi-layer PVC, fire-resistant and waterproof, designed to withstand extreme temperatures and strong mechanical stress."
     },
+    "sistem-glisant": {
+      "label": "Sliding System",
+      "title": "Elegant glass walls that open your space to the world",
+      "desc": "Sliding glass systems are among the most popular choices in modern architecture. They bring natural light inside, create a seamless connection between indoor and outdoor spaces, and offer a clean, minimalist aesthetic. Whether for a terrace, balcony, or commercial space, our sliding systems adapt to any environment.",
+      "whyTitle": "Key advantages",
+      "f1Title": "Space efficiency",
+      "f1Desc": "Panels slide smoothly along the rail, maximizing usable space without swinging doors.",
+      "f2Title": "Panoramic view",
+      "f2Desc": "Floor-to-ceiling glass eliminates visual barriers and floods the interior with natural light.",
+      "f3Title": "Easy operation",
+      "f3Desc": "Smooth sliding mechanism with soft-close technology for effortless daily use.",
+      "f4Title": "Durability",
+      "f4Desc": "Tempered safety glass and anodized aluminium profiles built to last for decades."
+    },
     "sistem-bioclimatic": {
       "label": "Bioclimatic",
       "title": "Intelligent louvres, impeccable comfort",
@@ -238,6 +253,8 @@
     "item3Desc": "Rotating louvres that control light and ventilation, creating the perfect microclimate.",
     "item4Title": "Guillotine System",
     "item4Desc": "Automatic glass closure systems for maximum protection and comfort.",
+    "item5Title": "Sliding System",
+    "item5Desc": "Elegant sliding glass panels that connect indoor and outdoor spaces with a clean, minimalist design.",
     "learnMore": "Learn more"
   },
   "faq": {

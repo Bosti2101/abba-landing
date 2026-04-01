@@ -49,6 +49,15 @@ export const portfolioCategories: PortfolioCategory[] = [
       category: "sistem-ghilotina",
     })),
   },
+  {
+    id: "sistem-glisant",
+    label: "category5",
+    images: Array.from({ length: 3 }, (_, i) => ({
+      src: `/projects/SISTEM GLISANT/sistem-glisant-${i + 1}.webp`,
+      alt: "ABA Pergola Systems",
+      category: "sistem-glisant",
+    })),
+  },
 ];
 
 export const contactBranches: ContactBranch[] = [
@@ -98,5 +107,12 @@ export const serviceItems: ServiceItem[] = [
     description: "item4Desc",
     image: "/projects/SISTEM GHILOTINA/sistem-ghilotina-1.webp",
     href: "/projects/sistem-ghilotina",
+  },
+  {
+    id: "sistem-glisant",
+    title: "item5Title",
+    description: "item5Desc",
+    image: "/projects/SISTEM GLISANT/sistem-glisant-1.webp",
+    href: "/projects/sistem-glisant",
   },
 ];

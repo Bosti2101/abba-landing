@@ -10,6 +10,7 @@ import { BioclimaticContent } from './bioclimatic-content';
 import { PergolaRetractabilaContent } from './pergola-retractabila-content';
 import { GradinaDeIarnaContent } from './gradina-de-iarna-content';
 import { SistemGhilotinaContent } from './sistem-ghilotina-content';
+import { SistemGlisantContent } from './sistem-glisant-content';
 
 interface ProjectPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -62,7 +63,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const images = category?.images ?? [];
 
   const hasRichContent =
-    slug === 'sistem-bioclimatic' || slug === 'pergola-retractabila' || slug === 'gradina-de-iarna' || slug === 'sistem-ghilotina';
+    slug === 'sistem-bioclimatic' || slug === 'pergola-retractabila' || slug === 'gradina-de-iarna' || slug === 'sistem-ghilotina' || slug === 'sistem-glisant';
 
   const galleryImages = hasRichContent
     ? images.map((img) => ({ src: img.src, alt: img.alt }))
@@ -79,6 +80,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       {slug === 'pergola-retractabila' && <PergolaRetractabilaContent />}
       {slug === 'gradina-de-iarna' && <GradinaDeIarnaContent />}
       {slug === 'sistem-ghilotina' && <SistemGhilotinaContent />}
+      {slug === 'sistem-glisant' && <SistemGlisantContent />}
 
       <section className='section-y-sm bg-white'>
         <Container>

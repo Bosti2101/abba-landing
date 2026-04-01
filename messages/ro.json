@@ -84,6 +84,7 @@
     "category2": "Grădină de Iarnă",
     "category3": "Acoperiș Bioclimatic Rulant",
     "category4": "Fereastră Ghilotină Automată",
+    "category5": "Sistem de Sticlă Glisantă",
     "viewAll": "Vezi Toate Proiectele",
     "filterAll": "Toate"
   },
@@ -211,6 +212,20 @@
       "f4Title": "Membrană PVC Premium",
       "f4Desc": "Realizată din PVC multistrat, ignifug și impermeabil, concepută să reziste la temperaturi extreme și tensionări mecanice puternice."
     },
+    "sistem-glisant": {
+      "label": "Sistem Glisant",
+      "title": "Pereți de sticlă eleganți care îți deschid spațiul spre lume",
+      "desc": "Sistemele de sticlă glisantă se numără printre cele mai populare alegeri în arhitectura modernă. Aduc lumina naturală în interior, creează o legătură perfectă între spațiile interioare și exterioare și oferă o estetică curată și minimalistă. Fie că este vorba de o terasă, balcon sau spațiu comercial, sistemele noastre glisante se adaptează oricărui mediu.",
+      "whyTitle": "Avantaje principale",
+      "f1Title": "Economie de spațiu",
+      "f1Desc": "Panourile alunecă lin pe șină, maximizând spațiul utilizabil fără uși batante.",
+      "f2Title": "Vedere panoramică",
+      "f2Desc": "Sticla de la podea la tavan elimină barierele vizuale și inundă interiorul cu lumină naturală.",
+      "f3Title": "Ușurință în utilizare",
+      "f3Desc": "Mecanism de alunecare lin cu tehnologie soft-close pentru o utilizare zilnică fără efort.",
+      "f4Title": "Durabilitate",
+      "f4Desc": "Sticlă de securitate călită și profile din aluminiu eloxat construite să reziste decenii."
+    },
     "sistem-bioclimatic": {
       "label": "Bioclimatic",
       "title": "Lamele inteligente, confort impecabil",
@@ -238,6 +253,8 @@
     "item3Desc": "Lamele orientabile care controlează lumina și ventilația, creând microclimatul perfect.",
     "item4Title": "Sistem Ghilotină",
     "item4Desc": "Sisteme automate de închidere cu sticlă pentru protecție și confort maxim.",
+    "item5Title": "Sistem Glisant",
+    "item5Desc": "Panouri de sticlă glisante elegante care conectează spațiile interioare și exterioare cu un design curat și minimalist.",
     "learnMore": "Află mai mult"
   },
   "faq": {
