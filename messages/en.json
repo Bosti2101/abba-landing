@@ -169,6 +169,20 @@
     "errorRetry": "Try Again"
   },
   "projects": {
+    "pergola-retractabila": {
+      "label": "Retractable Pergola",
+      "title": "Refinement and Comfort Without Compromise",
+      "desc": "A touch of modernity that redefines the value of your living space. The essence of four-season comfort comes to life in your garden. Our pergola systems, defined by a contemporary design vision, transform any outdoor space from a simple relaxation area into an aesthetic and ultra-functional living hub. The membrane (awning fabric) is made from multi-layer PVC, fire-resistant and waterproof, designed to withstand extreme temperatures and strong mechanical stress. Make the most of nature at any time of year, under the protection of an intelligent and durable structure.",
+      "whyTitle": "Why choose our premium solution?",
+      "f1Title": "Integrated LED Lighting",
+      "f1Desc": "Extend your relaxation moments even after sunset. The LED lighting system is discreetly integrated into the structure, providing a warm ambiance and a spectacular visual effect.",
+      "f2Title": "Modularity and Versatility",
+      "f2Desc": "Designed to be perfectly compatible with sliding or guillotine glass systems, our pergolas allow complete enclosure of the space, offering total protection against wind and bad weather.",
+      "f3Title": "Durability and Design",
+      "f3Desc": "Enjoy the view while being protected from sun, rain or snow, relying on a robust structure built to withstand the test of time.",
+      "f4Title": "Premium PVC Membrane",
+      "f4Desc": "Made from multi-layer PVC, fire-resistant and waterproof, designed to withstand extreme temperatures and strong mechanical stress."
+    },
     "sistem-bioclimatic": {
       "label": "Bioclimatic",
       "title": "Intelligent louvres, impeccable comfort",
@@ -188,7 +202,7 @@
     "label": "Our Services",
     "title": "Comprehensive Solutions for Outdoor Spaces",
     "description": "From retractable pergolas to full winter gardens, we offer premium solutions tailored to your needs.",
-    "item1Title": "Retractable Roof",
+    "item1Title": "Retractable Pergola",
     "item1Desc": "Elegant, retractable covering systems for residential and commercial terraces.",
     "item2Title": "Winter Gardens",
     "item2Desc": "Custom glass and aluminium extensions that transform your terrace into a year-round living space.",

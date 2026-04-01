@@ -169,6 +169,20 @@
     "errorRetry": "Încearcă din nou"
   },
   "projects": {
+    "pergola-retractabila": {
+      "label": "Pergolă Retractabilă",
+      "title": "Rafinament și Confort Fără Compromisuri",
+      "desc": "O notă de modernitate care redefinește valoarea spațiului tău de locuit. Esența confortului celor patru anotimpuri prinde viață în grădina ta. Sistemele noastre de pergole, definite printr-o viziune de design contemporan, metamorfozează orice spațiu exterior dintr-o simplă zonă de relaxare într-un centru de viață estetic și ultra-funcțional. Membrana (prelata) este realizată din PVC multistrat, ignifug și impermeabil, conceput să reziste la temperaturi extreme și tensionări mecanice puternice. Profită de natură în orice moment al anului, sub protecția unei structuri inteligente și durabile.",
+      "whyTitle": "De ce să alegi soluția noastră premium?",
+      "f1Title": "Iluminare LED integrată",
+      "f1Desc": "Prelungește momentele de relaxare și după apusul soarelui. Sistemul de iluminat cu LED-uri este integrat discret în structură, oferind o ambianță caldă și un aspect vizual spectaculos.",
+      "f2Title": "Modularitate și Versatilitate",
+      "f2Desc": "Proiectate pentru a fi perfect compatibile cu sistemele de sticlă glisantă sau de tip ghilotină, pergolele noastre permit închiderea completă a spațiului, oferind protecție totală împotriva vântului și a intemperiilor.",
+      "f3Title": "Durabilitate și Design",
+      "f3Desc": "Bucură-te de priveliște în timp ce ești protejat de soare, ploaie sau zăpadă, mizând pe o structură robustă, construită să reziste testului timpului.",
+      "f4Title": "Membrană PVC Premium",
+      "f4Desc": "Realizată din PVC multistrat, ignifug și impermeabil, concepută să reziste la temperaturi extreme și tensionări mecanice puternice."
+    },
     "sistem-bioclimatic": {
       "label": "Bioclimatic",
       "title": "Lamele inteligente, confort impecabil",
@@ -188,7 +202,7 @@
     "label": "Serviciile Noastre",
     "title": "Soluții Complete pentru Spații Exterioare",
     "description": "De la pergole retractabile la grădini de iarnă complete, oferim soluții premium adaptate nevoilor dumneavoastră.",
-    "item1Title": "Acoperiș Retractabil",
+    "item1Title": "Pergolă Retractabilă",
     "item1Desc": "Sisteme de acoperire retractabile elegante, perfecte pentru terase rezidențiale și comerciale.",
     "item2Title": "Grădini de Iarnă",
     "item2Desc": "Extensii personalizate din sticlă și aluminiu care vă transformă terasa într-un spațiu de locuit pe tot parcursul anului.",

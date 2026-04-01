@@ -7,6 +7,7 @@ import { PageHero } from '@/components/sections/page-hero/page-hero';
 import { Container } from '@/components/ui/container';
 import { ProjectGallery } from './project-gallery';
 import { BioclimaticContent } from './bioclimatic-content';
+import { PergolaRetractabilaContent } from './pergola-retractabila-content';
 
 interface ProjectPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -26,8 +27,12 @@ export async function generateMetadata({
   if (!item) return {};
 
   const t = await getTranslations({ locale, namespace: 'services' });
-  const title = t(item.title as 'item1Title' | 'item2Title' | 'item3Title' | 'item4Title');
-  const description = t(item.description as 'item1Desc' | 'item2Desc' | 'item3Desc' | 'item4Desc');
+  const title = t(
+    item.title as 'item1Title' | 'item2Title' | 'item3Title' | 'item4Title',
+  );
+  const description = t(
+    item.description as 'item1Desc' | 'item2Desc' | 'item3Desc' | 'item4Desc',
+  );
 
   return {
     title: `${title} — ABA Pergola Systems`,
@@ -44,34 +49,36 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   setRequestLocale(locale as Locale);
   const t = await getTranslations({ locale, namespace: 'services' });
 
-  const title = t(item.title as 'item1Title' | 'item2Title' | 'item3Title' | 'item4Title');
-  const description = t(item.description as 'item1Desc' | 'item2Desc' | 'item3Desc' | 'item4Desc');
+  const title = t(
+    item.title as 'item1Title' | 'item2Title' | 'item3Title' | 'item4Title',
+  );
+  const description = t(
+    item.description as 'item1Desc' | 'item2Desc' | 'item3Desc' | 'item4Desc',
+  );
 
   const category = portfolioCategories.find((cat) => cat.id === slug);
   const images = category?.images ?? [];
 
-  const isBioclimatic = slug === 'sistem-bioclimatic';
+  const hasRichContent =
+    slug === 'sistem-bioclimatic' || slug === 'pergola-retractabila';
+
+  const galleryImages = hasRichContent
+    ? images.map((img) => ({ src: img.src, alt: img.alt }))
+    : [
+        { src: item.image, alt: title },
+        ...images.slice(0, 2).map((img) => ({ src: img.src, alt: img.alt })),
+      ];
 
   return (
     <>
       <PageHero label={t('label')} title={title} description={description} />
 
-      {isBioclimatic && <BioclimaticContent />}
+      {slug === 'sistem-bioclimatic' && <BioclimaticContent />}
+      {slug === 'pergola-retractabila' && <PergolaRetractabilaContent />}
 
       <section className='section-y-sm bg-white'>
         <Container>
-          {isBioclimatic ? (
-            <ProjectGallery
-              images={images.map((img) => ({ src: img.src, alt: img.alt }))}
-            />
-          ) : (
-            <ProjectGallery
-              images={[
-                { src: item.image, alt: title },
-                ...images.slice(0, 2).map((img) => ({ src: img.src, alt: img.alt })),
-              ]}
-            />
-          )}
+          <ProjectGallery images={galleryImages} />
         </Container>
       </section>
     </>

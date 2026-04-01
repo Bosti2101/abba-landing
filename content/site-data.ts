@@ -14,20 +14,13 @@ export const aboutStats: StatItem[] = [
 
 export const portfolioCategories: PortfolioCategory[] = [
   {
-    id: "retractable-roof",
+    id: "pergola-retractabila",
     label: "category1",
-    images: [
-      {
-        src: "/images/pic1.webp",
-        alt: "Retractable roof pergola over residential terrace",
-        category: "retractable-roof",
-      },
-      {
-        src: "/images/pic2.webp",
-        alt: "Modern retractable pergola system",
-        category: "retractable-roof",
-      },
-    ],
+    images: Array.from({ length: 22 }, (_, i) => ({
+      src: `/projects/PERGOLA RETRACTABILA/pergola-retractabila-${i + 1}.webp`,
+      alt: "ABA Pergola Systems",
+      category: "pergola-retractabila",
+    })),
   },
   {
     id: "winter-garden",
@@ -93,11 +86,11 @@ export const contactBranches: ContactBranch[] = [
 
 export const serviceItems: ServiceItem[] = [
   {
-    id: "retractable-roof",
+    id: "pergola-retractabila",
     title: "item1Title",
     description: "item1Desc",
-    image: "/images/pic1.webp",
-    href: "/projects/retractable-roof",
+    image: "/projects/PERGOLA RETRACTABILA/pergola-retractabila-1.webp",
+    href: "/projects/pergola-retractabila",
   },
   {
     id: "winter-garden",
