@@ -37,10 +37,20 @@ export async function generateMetadata({
     item.description as 'item1Desc' | 'item2Desc' | 'item3Desc' | 'item4Desc',
   );
 
+  const category = portfolioCategories.find((cat) => cat.id === slug);
+  const firstImage = category?.images[0]?.src ?? '/logo.png';
+
   return {
     title: `${title} — ABA Pergola Systems`,
     description,
-    openGraph: { title, description },
+    openGraph: { title, description, images: [{ url: firstImage }] },
+    twitter: { card: 'summary_large_image', title, description, images: [firstImage] },
+    alternates: {
+      canonical: `/${locale}/projects/${slug}`,
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `/${l}/projects/${slug}`])
+      ),
+    },
   };
 }
 

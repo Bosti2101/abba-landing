@@ -26,14 +26,18 @@ export function LivingSpacesSection() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout>;
     const interval = setInterval(() => {
       setVisible(false);
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setCurrent((prev) => (prev + 1) % slides.length);
         setVisible(true);
       }, 400);
     }, 3500);
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   const features = [t("feature1"), t("feature2"), t("feature3")];

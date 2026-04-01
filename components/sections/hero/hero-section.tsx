@@ -17,8 +17,6 @@ const heroSlides = [
 ];
 
 const SLIDE_INTERVAL = 5;
-const WIPE_DURATION = 0.6;
-const ZOOM_DURATION = 12;
 
 export function HeroSection() {
   const t = useTranslations('hero');
@@ -39,45 +37,6 @@ export function HeroSection() {
       className='relative min-h-dvh flex flex-col overflow-hidden'
       aria-label='Hero section'
     >
-      <style>{`
-        .hero-slide {
-          position: absolute;
-          inset: 0;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          overflow: hidden;
-        }
-        .hero-slide--active {
-          will-change: clip-path;
-          animation: hero-wipe ${WIPE_DURATION}s cubic-bezier(0.65, 0, 0.35, 1) forwards !important;
-        }
-        .hero-slide--first {
-          animation: none !important;
-        }
-        .hero-zoom {
-          width: 100%;
-          height: 100%;
-          transform: scale(1);
-          will-change: transform;
-        }
-        .hero-zoom--running {
-          animation: hero-kb ${ZOOM_DURATION}s linear infinite !important;
-        }
-        @keyframes hero-wipe {
-          from { clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
-          to   { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-        }
-        @keyframes hero-kb {
-          from { transform: scale(1); }
-          to   { transform: scale(1.35); }
-        }
-        @media (max-width: 768px) {
-          @keyframes hero-kb {
-            from { transform: scale(1); }
-            to   { transform: scale(1.5); }
-          }
-        }
-      `}</style>
-
       <div className='absolute inset-0' style={{ zIndex: 0 }}>
         {heroSlides.map((slide, i) => {
           const isActive = i === slides.active;
@@ -109,15 +68,8 @@ export function HeroSection() {
         })}
 
         <div
-          className='absolute inset-0 pointer-events-none'
-          style={{
-            zIndex: 3,
-            background: `
-              linear-gradient(180deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.85) 100%),
-              linear-gradient(135deg, rgba(192,57,43,0.12) 0%, transparent 50%, rgba(0,0,0,0.4) 100%),
-              radial-gradient(ellipse 80% 100% at 0% 50%, rgba(0,0,0,0.55) 0%, transparent 70%)
-            `,
-          }}
+          className='hero-overlay absolute inset-0 pointer-events-none'
+          style={{ zIndex: 3 }}
         />
       </div>
 
@@ -187,15 +139,6 @@ export function HeroSection() {
         style={{ zIndex: 4 }}
         aria-hidden='true'
       >
-        <style>{`
-          @keyframes hero-chevron {
-            0%, 100% { opacity: 0.15; }
-            50% { opacity: 0.6; }
-          }
-          .hero-chevron {
-            animation: hero-chevron 1.6s ease-in-out infinite !important;
-          }
-        `}</style>
         <motion.div
           className='flex flex-col items-center gap-2 text-white/40'
           initial={{ opacity: 0 }}

@@ -72,7 +72,7 @@ export function ServicesSection({ showHeading = true }: { showHeading?: boolean 
                   <p className='text-xs text-ink-muted leading-relaxed flex-1'>
                     {t(item.description as ItemDescKey)}
                   </p>
-                  <span className='inline-flex items-center gap-1.5 text-xs font-semibold text-brand mt-2 group-hover:gap-3 transition-all duration-200'>
+                  <span className='inline-flex items-center gap-1.5 text-xs font-semibold text-brand mt-2 group-hover:gap-3 transition-[gap] duration-200'>
                     {t('learnMore')} <ArrowIcon />
                   </span>
                 </div>
@@ -89,7 +89,7 @@ export function ServicesSection({ showHeading = true }: { showHeading?: boolean 
             aria-label='Previous'
             className='w-11 h-11 rounded-sm border border-border flex items-center justify-center text-ink-secondary hover:border-brand hover:text-brand cursor-pointer transition-all duration-200'
           >
-            <svg width='18' height='18' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth='1.5'>
+            <svg aria-hidden='true' width='18' height='18' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth='1.5'>
               <path d='M19 12H5M12 5l-7 7 7 7' strokeLinecap='round' strokeLinejoin='round' />
             </svg>
           </button>
@@ -98,7 +98,7 @@ export function ServicesSection({ showHeading = true }: { showHeading?: boolean 
             aria-label='Next'
             className='w-11 h-11 rounded-sm border border-border flex items-center justify-center text-ink-secondary hover:border-brand hover:text-brand cursor-pointer transition-all duration-200'
           >
-            <svg width='18' height='18' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth='1.5'>
+            <svg aria-hidden='true' width='18' height='18' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth='1.5'>
               <path d='M5 12h14M12 5l7 7-7 7' strokeLinecap='round' strokeLinejoin='round' />
             </svg>
           </button>

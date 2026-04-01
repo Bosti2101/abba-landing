@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, memo } from "react";
 import type { GalleryImage } from "./types";
 
 interface GalleryItemProps {
@@ -11,11 +11,12 @@ interface GalleryItemProps {
   className?: string;
 }
 
-export function GalleryItem({ img, index, onClick, className }: GalleryItemProps) {
+export const GalleryItem = memo(function GalleryItem({ img, index, onClick, className }: GalleryItemProps) {
   const [loaded, setLoaded] = useState(false);
 
   return (
     <button
+      type="button"
       onClick={onClick}
       className={`relative overflow-hidden rounded-xl group cursor-zoom-in bg-neutral-100 ${className ?? ""}`}
       aria-label={img.alt}
@@ -37,4 +38,4 @@ export function GalleryItem({ img, index, onClick, className }: GalleryItemProps
       <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </button>
   );
-}
+});
